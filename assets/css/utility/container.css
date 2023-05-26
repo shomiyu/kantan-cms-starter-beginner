@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  コンテンツ幅 設定用
+--------------------------------------------------------- */
+
+.u-container {
+  width: 1024px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  /* 480px 以上 */
+}
+
+@media screen and (min-width: 768px) {
+  /* 768px 以上 */
+}
+
+@media screen and (min-width: 1024px) {
+  /* 1024px 以上 */
+}

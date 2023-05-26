@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  base css
+  - サイトの基本スタイル設定
+--------------------------------------------------------- */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+    "Osaka", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  max-width: 100%;
+  font-family: inherit;
+  font-size: 100%;
+}
