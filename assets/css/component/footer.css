@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  footer style
+--------------------------------------------------------- */
+
+.c-footer {
+  background-color: #fff;
+  padding-top: 48px;
+}
+
+.c-footer__copyright {
+  font-size: 12px;
+  text-align: center;
+  padding: 24px 0;
+}
+
+.c-footer__copyright small {
+  font-size: inherit;
+}

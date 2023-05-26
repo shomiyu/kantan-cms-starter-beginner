@@ -13,6 +13,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 
 .c-header__container {
@@ -65,6 +66,7 @@
 .c-headerMenu {
   padding-top: calc(65px + 40px);
   background-color: #fff;
+  height: 100%;
 }
 
 .c-headerMenuList {

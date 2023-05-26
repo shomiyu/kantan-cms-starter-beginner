@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  表示 / 非表示 の制御
+  - u-display-spOnly : モバイルのみ表示
+  - u-display-tab    : タブレット以上で表示
+  - u-display-pc     : PC以上で表示
+--------------------------------------------------------- */
+
+.u-display-spOnly {
+  display: block;
+}
+
+.u-display-tab {
+  display: none;
+}
+
+.u-display-pc {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .u-display-spOnly {
+    display: none;
+  }
+
+  .u-display-tab {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .u-display-pc {
+    display: block;
+  }
+}

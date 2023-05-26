@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  セクション 設定用
+--------------------------------------------------------- */
+
+/* h2 セクション相当 */
+.l-sectionPrimary {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.l-sectionPrimary--gray {
+  background-color: #fafafa;
+}
+
+@media screen and (min-width: 768px) {
+  .l-sectionPrimary {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}

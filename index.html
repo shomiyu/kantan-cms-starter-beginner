@@ -12,12 +12,18 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap"
       rel="stylesheet"
     />
-    <!-- google fonts -->
+    <!-- // google fonts -->
     <link rel="stylesheet" href="./assets/css/foundation/reset.css" />
     <link rel="stylesheet" href="./assets/css/foundation/base.css" />
+    <link rel="stylesheet" href="./assets/css/layout/container.css" />
+    <link rel="stylesheet" href="./assets/css/layout/main.css" />
+    <link rel="stylesheet" href="./assets/css/layout/section.css" />
+    <link rel="stylesheet" href="./assets/css/layout/heading.css" />
     <link rel="stylesheet" href="./assets/css/component/header.css" />
-    <link rel="stylesheet" href="./assets/css/utility/container.css" />
+    <link rel="stylesheet" href="./assets/css/component/footer.css" />
     <link rel="stylesheet" href="./assets/css/utility/screen-reader-text.css" />
+    <link rel="stylesheet" href="./assets/css/utility/display.css" />
+    <link rel="stylesheet" href="./assets/css/pages/top.css" />
     <!-- js -->
     <script src="./assets/js/jquery-3.7.0.min.js" defer></script>
     <script src="./assets/js/index.js" defer></script>
@@ -70,8 +76,90 @@
       </div>
     </header>
 
-    <main></main>
+    <main class="l-main">
+      <div class="p-mainViual">
+        <figure class="p-mainViual__image">
+          <img
+            src="https://placehold.jp/1024x592.png"
+            alt="ダミー"
+            width="1024"
+            height="592"
+          />
+        </figure>
 
-    <footer></footer>
+        <p class="p-mainViual__text">
+          <span>HTMLとCSSとjQueryでつくる。</span>
+          <span>コンテンツ管理ができる。</span>
+          <span>すばやく公開する。</span>
+        </p>
+      </div>
+
+      <!-- 導入 -->
+      <section class="l-sectionPrimary">
+        <div class="l-container">
+          <h2 class="l-headingPrimary">
+            CMSなのに難しい技術はいらない。<br />必要なのはHTMLとCSS<br />ときどきjQuery。
+          </h2>
+          <div class="p-topIntroductionTextContents">
+            <p>
+              お知らせ機能をつけるだけなのに<br
+                class="u-display-spOnly"
+              />WordPressで作る必要はあるのか？<br />WordPressが難しくて挫折した経験はないか？
+            </p>
+            <p>HTMLとCSSだけでいい。<br />サーバーだってなんでもいい。</p>
+            <p>そんなCMSがあったら、よくない？</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 特徴 -->
+      <section class="l-sectionPrimary l-sectionPrimary--gray">
+        <div class="l-container">
+          <h2 class="p-topFeatureHeading">
+            KANTAN! CMS STARTER
+            <span class="p-topFeatureHeading__labelWrapper">
+              <span class="p-topFeatureHeading__label">for Beginner</span>
+            </span>
+            いいところ
+          </h2>
+        </div>
+      </section>
+
+      <!-- 流れ -->
+      <section class="l-sectionPrimary">
+        <div class="l-container">
+          <h2 class="l-headingPrimary">サイトの構築から公開まで</h2>
+        </div>
+      </section>
+
+      <!-- お知らせ -->
+      <section class="l-sectionPrimary l-sectionPrimary--gray">
+        <div class="l-container">
+          <h2 class="l-headingPrimary">お知らせ</h2>
+        </div>
+      </section>
+
+      <!-- コラム -->
+      <section class="l-sectionPrimary">
+        <div class="l-container">
+          <h2 class="l-headingPrimary">お役立ちコラム</h2>
+        </div>
+      </section>
+
+      <!-- 告知 -->
+      <section class="l-sectionPrimary l-sectionPrimary--gray">
+        <div class="l-container">
+          <h2 class="l-headingPrimary">
+            得意な技術でCMSを始めよう<br />KANTAN! CMS STARTER シリーズ
+          </h2>
+        </div>
+      </section>
+    </main>
+
+    <footer class="c-footer">
+      <p class="c-footer__copyright">
+        <small>©︎ 2023 KANTAN! CMS STARTER All right reserved.</small>
+      </p>
+    </footer>
   </body>
 </html>
