@@ -4,7 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>KANTAN! CMS STARTER for Beginner</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts -->
+    <link rel="stylesheet" href="./assets/css/foundation/reset.css" />
+    <link rel="stylesheet" href="./assets/css/foundation/base.css" />
+    <link rel="stylesheet" href="./assets/css/component/header.css" />
+    <link rel="stylesheet" href="./assets/css/utility/container.css" />
+    <link rel="stylesheet" href="./assets/css/utility/screen-reader-text.css" />
+    <!-- js -->
+    <script src="./assets/js/jquery-3.7.0.min.js" defer></script>
+    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/header-menu.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header class="c-header" id="js-header">
+      <div class="c-header__container">
+        <h1 class="c-header__siteName">
+          <a class="c-header__siteNameLink" href="/">
+            <img
+              src="./assets/images/logo.svg"
+              alt="KANTAN! CMS STARTER for Beginner"
+              width="190"
+              height="28"
+            />
+          </a>
+        </h1>
+
+        <button class="c-headerMobileButton" id="js-mobileMenuButton">
+          <span class="c-headerMobileButton__line">
+            <span class="u-screenReaderText">メニューを開閉する</span>
+          </span>
+        </button>
+
+        <div class="c-headerMenuWrapper" id="js-mobileMenu">
+          <nav class="c-headerMenu">
+            <ul class="c-headerMenuList">
+              <li class="c-headerMenuList__item">
+                <a class="c-headerMenuList__link" href="#!">機能紹介</a>
+              </li>
+              <li class="c-headerMenuList__item">
+                <a class="c-headerMenuList__link" href="#!">公開までの流れ</a>
+              </li>
+              <li class="c-headerMenuList__item">
+                <a class="c-headerMenuList__link" href="#!">お役立ちコラム</a>
+              </li>
+              <li class="c-headerMenuList__item c-headerMenuList__item--cta">
+                <a
+                  class="c-headerMenuList__ctaLink"
+                  href="#!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >テンプレートから作成</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+
+    <footer></footer>
+  </body>
 </html>
