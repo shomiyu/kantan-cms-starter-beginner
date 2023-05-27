@@ -24,3 +24,45 @@
 .c-card__image img {
   width: 100%;
 }
+
+/* タグ */
+.c-card__tagList {
+  font-size: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+}
+
+.c-card__tag {
+  color: #fff;
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #000;
+  border-radius: 2px;
+}
+
+/* 囲みあり */
+.c-card--hasBorder .c-card__inner {
+  gap: 0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.c-card--hasBorder .c-card__textContents {
+  padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-card__title {
+    font-size: 24px;
+  }
+
+  /* タグ */
+  .c-card__tagList {
+    font-size: 12px;
+  }
+}

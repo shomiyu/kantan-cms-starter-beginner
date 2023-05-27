@@ -128,3 +128,20 @@
 .p-topFlow .c-step__item::before {
   font-family: "Titillium Web", sans-serif;
 }
+
+/*
+  シリーズセクション
+---------------------------------------------- */
+.p-topSeriesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-topSeriesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
