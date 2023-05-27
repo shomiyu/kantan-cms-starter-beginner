@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  リンク一覧 パーツ
+--------------------------------------------------------- */
+
+.c-linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.c-linkList__contents {
+  font-size: 14px;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  padding: 16px calc(8px + 24px + 4px) 16px 16px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  position: relative;
+}
+
+.c-linkList__contents::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuNzUgNy41MDI0NEwxNSAxMi4wMDAyTDkuNzUgMTYuNTAyNCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+
+/* 外部リンクのアイコン */
+.c-linkList__contents--external::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM2Ml80NTYpIj4KPHBhdGggZD0iTTguNDM3NSAxNy40Mzc1SDE3LjQzNzVWMC41NjI1SDAuNTYyNVY5LjU2MjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik03LjMxMjUgMTUuNzVWMTAuNjg3NU03LjMxMjUgMTAuNjg3NUgyLjI1TTcuMzEyNSAxMC42ODc1TDAuNTYyNSAxNy40Mzc1IiBzdHJva2U9ImJsYWNrIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzM2Ml80NTYiPgo8cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .c-linkList {
+    gap: 24px;
+  }
+
+  .c-linkList__contents {
+    border-radius: 8px;
+  }
+}
