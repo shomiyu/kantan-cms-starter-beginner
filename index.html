@@ -32,9 +32,11 @@
     <link rel="stylesheet" href="./assets/css/component/link-list.css" />
     <link rel="stylesheet" href="./assets/css/utility/screen-reader-text.css" />
     <link rel="stylesheet" href="./assets/css/utility/display.css" />
-    <link rel="stylesheet" href="./assets/css/utility/margin.css" />
     <link rel="stylesheet" href="./assets/css/utility/text-align.css" />
     <link rel="stylesheet" href="./assets/css/utility/text-link.css" />
+    <link rel="stylesheet" href="./assets/css/utility/list.css" />
+    <link rel="stylesheet" href="./assets/css/utility/margin.css" />
+    <link rel="stylesheet" href="./assets/css/utility/font-size.css" />
     <link rel="stylesheet" href="./assets/css/pages/top.css" />
     <!-- js -->
     <script src="./assets/js/jquery-3.7.0.min.js" defer></script>
@@ -532,13 +534,14 @@
                   <div class="c-card__textContents">
                     <h3 class="c-card__title">for Webpack</h3>
                     <ul class="c-card__tagList u-mt-sp-8 u-mb-sp-8">
-                      <li><span class="c-card__tag">Webpack</span></li>
+                      <li><span class="c-card__tag">Pug</span></li>
                       <li><span class="c-card__tag">HTML</span></li>
+                      <li><span class="c-card__tag">Sass</span></li>
                       <li><span class="c-card__tag">CSS</span></li>
                       <li><span class="c-card__tag">jQuery</span></li>
                     </ul>
                     <p class="c-card__text">
-                      Sassを使って効率重視で開発したい方向けに。
+                      PugやSassを使って効率重視で開発したい方向けに。
                     </p>
                   </div>
                   <figure class="c-card__image">
@@ -558,6 +561,45 @@
     </main>
 
     <footer class="c-footer">
+      <div class="l-container">
+        <div class="c-footer__upper">
+          <p class="c-footer__logo">
+            <a href="/">
+              <img
+                src="./assets/images/logo_large.svg"
+                alt="KANTAN! CMS STARTER for Beginner"
+                width="220"
+                height="119"
+              />
+            </a>
+          </p>
+
+          <nav>
+            <div class="c-footer__sitemap">
+              <ul class="u-list-hyphen u-fz-sp-small">
+                <li><a href="#!">機能紹介</a></li>
+                <li><a href="#!">公開までの流れ</a></li>
+                <li>
+                  <a href="#!">お役立ちコラム</a>
+                  <ul class="u-list-hyphen u-mt-sp-8">
+                    <li><a href="#!">お問い合わせフォームを実装したい</a></li>
+                    <li>
+                      <a href="#!"
+                        >ブログ機能をつけたい（microCMSのカスタマイズ）</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="u-list-hyphen u-fz-sp-small">
+                <li><a href="#!">お知らせ</a></li>
+                <li><a href="#!">お問い合わせ</a></li>
+                <li><a href="#!">プライバシーポリシー</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
       <p class="c-footer__copyright">
         <small>©︎ 2023 KANTAN! CMS STARTER All right reserved.</small>
       </p>

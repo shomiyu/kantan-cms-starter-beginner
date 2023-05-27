@@ -8,6 +8,27 @@
   padding-top: 48px;
 }
 
+.c-footer__upper {
+  display: grid;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+
+.c-footer__logo {
+  width: 50%;
+  max-width: 220px;
+}
+
+.c-footer__logo--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-footer__sitemap {
+  display: grid;
+  gap: 8px;
+}
+
 .c-footer__copyright {
   font-size: 12px;
   text-align: center;
@@ -16,4 +37,26 @@
 
 .c-footer__copyright small {
   font-size: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .c-footer__sitemap {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .c-footer__upper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  .c-footer__sitemap {
+    display: flex;
+    gap: 80px;
+  }
 }

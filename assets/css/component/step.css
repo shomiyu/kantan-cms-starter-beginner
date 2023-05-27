@@ -21,17 +21,18 @@
 
 /* 番号 */
 .c-step__item::before {
+  content: counter(step, decimal-leading-zero);
   color: #fff;
   font-size: 32px;
   font-weight: 900;
   letter-spacing: 0.05em;
-  content: counter(step, decimal-leading-zero);
   line-height: 64px;
   text-align: center;
   display: inline-block;
   width: 64px;
   height: 64px;
   background-color: #000;
+  border-radius: 4px;
   position: absolute;
   top: 0;
   left: 0;

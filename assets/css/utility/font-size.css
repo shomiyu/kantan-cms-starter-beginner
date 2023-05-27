@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  文字サイズ調整 ユーティリティ
+  実数値は 16px に対して
+  - xsmall  : 0.75em（12px）
+  - small  : 0.875em（14px）
+  - normal : 1em（16px）
+  - large  : 1.25em（20px）
+  - xlarge  : 1.5em（24px）
+  - 2xlarge  : 2em（32px）
+--------------------------------------------------------- */
+
+/*
+  モバイル、タブレット、PCに適用
+---------------------------------------------- */
+.u-fz-sp-xsmall {
+  font-size: 0.75em;
+}
+
+.u-fz-sp-small {
+  font-size: 0.875em;
+}
+
+.u-fz-sp-normal {
+  font-size: 1em;
+}
+
+.u-fz-sp-large {
+  font-size: 1.25em;
+}
+
+.u-fz-sp-xlarge {
+  font-size: 1.5em;
+}
+
+.u-fz-sp-2xlarge {
+  font-size: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  /*
+  タブレット、PCに適用
+  ---------------------------------------------- */
+  .u-fz-tab-xsmall {
+    font-size: 0.75em;
+  }
+
+  .u-fz-tab-small {
+    font-size: 0.875em;
+  }
+
+  .u-fz-tab-normal {
+    font-size: 1em;
+  }
+
+  .u-fz-tab-large {
+    font-size: 1.25em;
+  }
+
+  .u-fz-tab-xlarge {
+    font-size: 1.5em;
+  }
+
+  .u-fz-tab-2xlarge {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*
+  PCのみ適用
+  ---------------------------------------------- */
+  .u-fz-pc-xsmall {
+    font-size: 0.75em;
+  }
+
+  .u-fz-pc-small {
+    font-size: 0.875em;
+  }
+
+  .u-fz-pc-normal {
+    font-size: 1em;
+  }
+
+  .u-fz-pc-large {
+    font-size: 1.25em;
+  }
+
+  .u-fz-pc-xlarge {
+    font-size: 1.5em;
+  }
+
+  .u-fz-pc-2xlarge {
+    font-size: 2em;
+  }
+}
