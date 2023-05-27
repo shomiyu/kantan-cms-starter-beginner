@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  余白調整用 ユーティリティ
+  - 対応値： 8, 16, 24, 40, 56, 64, 80
+--------------------------------------------------------- */
+
+/*
+  モバイル、タブレット、PCに適用
+---------------------------------------------- */
+/* 上向き */
+.u-mt-sp-8 {
+  margin-top: 8px;
+}
+
+.u-mt-sp-16 {
+  margin-top: 16px;
+}
+
+.u-mt-sp-24 {
+  margin-top: 24px;
+}
+
+.u-mt-sp-40 {
+  margin-top: 40px;
+}
+
+.u-mt-sp-56 {
+  margin-top: 56px;
+}
+
+.u-mt-sp-64 {
+  margin-top: 64px;
+}
+
+.u-mt-sp-80 {
+  margin-top: 80px;
+}
+
+/* 下向き */
+.u-mb-sp-8 {
+  margin-bottom: 8px;
+}
+
+.u-mb-sp-16 {
+  margin-bottom: 16px;
+}
+
+.u-mb-sp-24 {
+  margin-bottom: 24px;
+}
+
+.u-mb-sp-40 {
+  margin-bottom: 40px;
+}
+
+.u-mb-sp-56 {
+  margin-bottom: 56px;
+}
+
+.u-mb-sp-64 {
+  margin-bottom: 64px;
+}
+
+.u-mb-sp-80 {
+  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  /*
+  タブレット、PCに適用
+  ---------------------------------------------- */
+  /* 上向き */
+  .u-mt-tab-8 {
+    margin-top: 8px;
+  }
+
+  .u-mt-tab-16 {
+    margin-top: 16px;
+  }
+
+  .u-mt-tab-24 {
+    margin-top: 24px;
+  }
+
+  .u-mt-tab-40 {
+    margin-top: 40px;
+  }
+
+  .u-mt-tab-56 {
+    margin-top: 56px;
+  }
+
+  .u-mt-tab-64 {
+    margin-top: 64px;
+  }
+
+  .u-mt-tab-80 {
+    margin-top: 80px;
+  }
+
+  /* 下向き */
+  .u-mb-tab-8 {
+    margin-bottom: 8px;
+  }
+
+  .u-mb-tab-16 {
+    margin-bottom: 16px;
+  }
+
+  .u-mb-tab-24 {
+    margin-bottom: 24px;
+  }
+
+  .u-mb-tab-40 {
+    margin-bottom: 40px;
+  }
+
+  .u-mb-tab-56 {
+    margin-bottom: 56px;
+  }
+
+  .u-mb-tab-64 {
+    margin-bottom: 64px;
+  }
+
+  .u-mb-tab-80 {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*
+  PCのみ適用
+  ---------------------------------------------- */
+  /* 上向き */
+  .u-mt-pc-8 {
+    margin-top: 8px;
+  }
+
+  .u-mt-pc-16 {
+    margin-top: 16px;
+  }
+
+  .u-mt-pc-24 {
+    margin-top: 24px;
+  }
+
+  .u-mt-pc-40 {
+    margin-top: 40px;
+  }
+
+  .u-mt-pc-56 {
+    margin-top: 56px;
+  }
+
+  .u-mt-pc-64 {
+    margin-top: 64px;
+  }
+
+  .u-mt-pc-80 {
+    margin-top: 80px;
+  }
+
+  /* 下向き */
+  .u-mb-pc-8 {
+    margin-bottom: 8px;
+  }
+
+  .u-mb-pc-16 {
+    margin-bottom: 16px;
+  }
+
+  .u-mb-pc-24 {
+    margin-bottom: 24px;
+  }
+
+  .u-mb-pc-40 {
+    margin-bottom: 40px;
+  }
+
+  .u-mb-pc-56 {
+    margin-bottom: 56px;
+  }
+
+  .u-mb-pc-64 {
+    margin-bottom: 64px;
+  }
+
+  .u-mb-pc-80 {
+    margin-bottom: 80px;
+  }
+}
