@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&family=Titillium+Web:wght@900&display=swap"
+      rel="stylesheet"
+    />
     <!-- // google fonts -->
     <link rel="stylesheet" href="./assets/css/foundation/reset.css" />
     <link rel="stylesheet" href="./assets/css/foundation/base.css" />
@@ -23,10 +27,12 @@
     <link rel="stylesheet" href="./assets/css/component/footer.css" />
     <link rel="stylesheet" href="./assets/css/component/card.css" />
     <link rel="stylesheet" href="./assets/css/component/button.css" />
+    <link rel="stylesheet" href="./assets/css/component/step.css" />
     <link rel="stylesheet" href="./assets/css/utility/screen-reader-text.css" />
     <link rel="stylesheet" href="./assets/css/utility/display.css" />
     <link rel="stylesheet" href="./assets/css/utility/margin.css" />
     <link rel="stylesheet" href="./assets/css/utility/text-align.css" />
+    <link rel="stylesheet" href="./assets/css/utility/text-link.css" />
     <link rel="stylesheet" href="./assets/css/pages/top.css" />
     <!-- js -->
     <script src="./assets/js/jquery-3.7.0.min.js" defer></script>
@@ -102,7 +108,9 @@
       <section class="l-sectionPrimary">
         <div class="l-container">
           <h2 class="l-headingPrimary">
-            CMSなのに難しい技術はいらない。<br />必要なのはHTMLとCSS<br />ときどきjQuery。
+            CMSなのに<br
+              class="u-display-spOnly"
+            />難しい技術はいらない。<br />必要なのはHTMLとCSS<br />ときどきjQuery。
           </h2>
           <div class="p-topIntroductionTextContents">
             <p>
@@ -261,7 +269,7 @@
             </li>
           </ul>
 
-          <div class="u-text-center u-mt-sp-64">
+          <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
             <a class="c-button" href="#!">機能について詳しく見る</a>
           </div>
         </div>
@@ -269,8 +277,137 @@
 
       <!-- 流れ -->
       <section class="l-sectionPrimary">
-        <div class="l-container">
+        <div class="l-container l-container--medium">
           <h2 class="l-headingPrimary">サイトの構築から公開まで</h2>
+          <ol class="p-topFlow c-step">
+            <li class="c-step__item">
+              <dl>
+                <dt class="c-step__title">連携する各アカウントの確認・登録</dt>
+                <dd class="c-step__text">
+                  <p>
+                    コンテンツ管理に「<a
+                      href="https://app.microcms.io"
+                      class="u-link-external"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >microCMS</a
+                    >」を使用しているので、初めての人は事前にアカウント登録をしておこう。
+                  </p>
+                  <p>
+                    また、テンプレートのHTMLとCSSはビッグバンのように無から生まれるわけではない。<br />オンラインでソースコードを管理・共有できるサービス、「<a
+                      href="https://github.co.jp/"
+                      class="u-link-external"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub</a
+                    >」を使用しての連携が必要となる。<br />こちらもアカウントをまだ持っていなければ登録しておこう。
+                  </p>
+                  <p>なにごとも準備は大事だ。</p>
+                </dd>
+              </dl>
+            </li>
+            <li class="c-step__item">
+              <dl>
+                <dt class="c-step__title">テンプレートのセットアップ</dt>
+                <dd class="c-step__text">
+                  <p>
+                    <a
+                      class="u-link-external"
+                      href="#!"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >microCMSのテンプレートサービス</a
+                    >にアクセスしよう。
+                  </p>
+                  <p>
+                    「このテンプレートを利用」のボタンで次のページに進み、GitHubと連携を行おう。<br />連携時の設定は全てデフォルトでOK。
+                  </p>
+                  <figure>
+                    <img
+                      src="./assets/images/img_flow_02.jpg"
+                      alt=""
+                      width=""
+                      height=""
+                    />
+                    <figcaption>GitHub連携後の設定</figcaption>
+                  </figure>
+                  <p>
+                    画像を参考に必要な項目の設定を行う。<br />ソースコードをオンラインで公開したくない場合は、「プライベートリポジトリとして作成する」にチェックを入れて次に進もう。
+                  </p>
+                  <p>
+                    問題なければセットアップが完了して、microCMSのサービスとGitHubのリポジトリが自動で作成されているはず。<br />この画面の内容は後ほど使うのでまだ閉じないでおこう。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="c-step__item">
+              <dl>
+                <dt class="c-step__title">ソースコードの準備</dt>
+                <dd class="c-step__text">
+                  <p>
+                    セットアップ完了画面に表示されているGitHubのページに移動して、ファイルをダウンロード・解凍しよう。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="c-step__item">
+              <dl>
+                <dt class="c-step__title">microCMSと連携</dt>
+                <dd class="c-step__text"></dd>
+              </dl>
+            </li>
+            <li class="c-step__item">
+              <dl>
+                <dt class="c-step__title">カスタマイズ</dt>
+                <dd class="c-step__text">
+                  <p>
+                    持ち前のHTMLとCSSでサイトを自由にカスタマイズしよう。<br />好きな色にしたり、好きなレイアウトに変えたり、もちろんテキストを変えるだけでも。
+                  </p>
+                  <p>
+                    お問い合わせフォームの導入やmicroCMSのカスタマイズは別のページで紹介しているので、必要であれば見てほしい。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="c-step__item">
+              <dl>
+                <dt class="c-step__title">コンテンツの入稿・動作確認</dt>
+                <dd class="c-step__text">
+                  <p>
+                    microCMSから記事を投稿してきちんと表示されるか確認しよう。<br />お問い合わせフォームの送受信テストやメタ情報周りの設定確認も忘れずに。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="c-step__item">
+              <dl>
+                <dt class="c-step__title">リリース</dt>
+                <dd class="c-step__text">
+                  <p>ここまできたらいよいよ公開だ。</p>
+                  <p>
+                    サーバーはなんでも良いけどオススメはNetlifyやVercel。英語のサイトでジンマシンが出る人もいるかもしれないけど、小さいサイトであれば基本的にはずっと無料で使える。
+                  </p>
+                  <p>
+                    もちろん、すでに契約中のサーバーにFTPでアップロードしてもOK。
+                  </p>
+                </dd>
+              </dl>
+            </li>
+            <li class="c-step__item">
+              <p class="c-step__title">
+                おめでとう、サイトの完成だ。<br />だけどこれは終わりの始まり。たくさん運用して育ててほしい。
+              </p>
+            </li>
+          </ol>
+          <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
+            <a
+              class="c-button c-button--external"
+              href="#!"
+              target="_blank"
+              rel="noopener noreferrer"
+              >microCMSテンプレートへ</a
+            >
+          </div>
         </div>
       </section>
 

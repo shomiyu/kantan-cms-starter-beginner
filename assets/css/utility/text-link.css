@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  テキストリンク ユーティリティ
+  - 下線
+  - 新しいタブで開く
+--------------------------------------------------------- */
+
+/* 下線 */
+.u-link-underline {
+  text-decoration: underline;
+}
+
+/* 新しいタブで開く */
+.u-link-external {
+  text-decoration: underline;
+  display: inline-block;
+  padding-right: calc(4px + 0.875em + 4px);
+  position: relative;
+}
+
+.u-link-external::after {
+  content: "";
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM2Ml80NTYpIj4KPHBhdGggZD0iTTguNDM3NSAxNy40Mzc1SDE3LjQzNzVWMC41NjI1SDAuNTYyNVY5LjU2MjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik03LjMxMjUgMTUuNzVWMTAuNjg3NU03LjMxMjUgMTAuNjg3NUgyLjI1TTcuMzEyNSAxMC42ODc1TDAuNTYyNSAxNy40Mzc1IiBzdHJva2U9ImJsYWNrIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzM2Ml80NTYiPgo8cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: calc(50% + 1px);
+  right: 4px;
+  transform: translateY(-50%);
+}

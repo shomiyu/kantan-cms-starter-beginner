@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ---------------------------------------------------------
   余白調整用 ユーティリティ
-  - 対応値： 8, 16, 24, 40, 56, 64, 80
+  - 対応値： 8, 16, 24, 40, 48, 56, 64, 80
 --------------------------------------------------------- */
 
 /*
@@ -22,6 +22,10 @@
 
 .u-mt-sp-40 {
   margin-top: 40px;
+}
+
+.u-mt-sp-48 {
+  margin-top: 48px;
 }
 
 .u-mt-sp-56 {
@@ -51,6 +55,10 @@
 
 .u-mb-sp-40 {
   margin-bottom: 40px;
+}
+
+.u-mb-sp-48 {
+  margin-bottom: 48px;
 }
 
 .u-mb-sp-56 {
@@ -86,6 +94,10 @@
     margin-top: 40px;
   }
 
+  .u-mt-tab-48 {
+    margin-top: 48px;
+  }
+
   .u-mt-tab-56 {
     margin-top: 56px;
   }
@@ -113,6 +125,10 @@
 
   .u-mb-tab-40 {
     margin-bottom: 40px;
+  }
+
+  .u-mb-tab-48 {
+    margin-bottom: 48px;
   }
 
   .u-mb-tab-56 {
@@ -149,6 +165,10 @@
     margin-top: 40px;
   }
 
+  .u-mt-pc-48 {
+    margin-top: 48px;
+  }
+
   .u-mt-pc-56 {
     margin-top: 56px;
   }
@@ -176,6 +196,10 @@
 
   .u-mb-pc-40 {
     margin-bottom: 40px;
+  }
+
+  .u-mb-pc-48 {
+    margin-bottom: 48px;
   }
 
   .u-mb-pc-56 {

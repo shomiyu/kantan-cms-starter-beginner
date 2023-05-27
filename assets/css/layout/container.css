@@ -9,3 +9,17 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.l-container--medium {
+  width: 800px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-container--small {
+  width: 640px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}

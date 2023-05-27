@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  縦型ステップパーツ
+--------------------------------------------------------- */
+
+.c-step {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 40px;
+  position: relative;
+}
+
+.c-step__item {
+  counter-increment: step;
+  padding-left: calc(64px + 24px);
+  position: relative;
+}
+
+/* 番号 */
+.c-step__item::before {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  content: counter(step, decimal-leading-zero);
+  line-height: 64px;
+  text-align: center;
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.c-step__item:last-child::before {
+  content: "🎉";
+}
+
+/* 縦棒 */
+.c-step__item::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: calc(100% + 40px);
+  background-color: #000;
+  position: absolute;
+  left: calc(64px / 2);
+  top: 0;
+}
+
+.c-step__item:last-child::after {
+  display: none;
+}
+
+/* 見出し */
+.c-step__title {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* 本文 */
+.c-step__text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.c-step__text > * {
+  margin-top: 1.5em;
+}
+
+.c-step__text figcaption {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.c-step__text img {
+  box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-step {
+    gap: 48px;
+  }
+
+  .c-step__item {
+    padding-left: calc(80px + 40px);
+  }
+
+  /* 番号 */
+  .c-step__item::before {
+    font-size: 40px;
+    line-height: 80px;
+    width: 80px;
+    height: 80px;
+  }
+
+  /* 縦棒 */
+  .c-step__item::after {
+    left: calc(80px / 2);
+    height: calc(100% + 48px);
+  }
+
+  /* 見出し */
+  .c-step__title {
+    font-size: 24px;
+  }
+
+  /* 本文 */
+  .c-step__text {
+    font-size: 16px;
+  }
+}

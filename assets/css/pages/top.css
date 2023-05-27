@@ -66,14 +66,13 @@
   特徴セクション
 ---------------------------------------------- */
 .p-topFeatureHeading {
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .p-topFeatureHeading__labelWrapper {
   display: block;
-  margin-top: 4px;
   margin-bottom: 8px;
 }
 
@@ -123,4 +122,9 @@
   .p-topFeatureList {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* 流れ */
+.p-topFlow .c-step__item::before {
+  font-family: "Titillium Web", sans-serif;
 }
