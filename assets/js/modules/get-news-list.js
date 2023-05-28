@@ -1,6 +1,6 @@
 import { microcms } from "../microcms.js";
 
-export const getNews = () => {
+export const getNewsList = () => {
   // 日付のフォーマット関数
   const formatDate = (dateString) => {
     const date = new Date(dateString);
