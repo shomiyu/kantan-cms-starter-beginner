@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  コラムページ 独自スタイル
+--------------------------------------------------------- */
+.p-columnPost {
+  padding: 16px 0 80px;
+}
+
+.p-columnThumbnail {
+  margin-bottom: 8px;
+}
+
+.p-columnThumbnail img {
+  width: 100%;
+}
+
+.p-columnPostDate {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 8px;
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .p-columnPost {
+    padding-bottom: 120px;
+  }
+}

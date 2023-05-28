@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Name</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/foundation/reset.css" />
+    <link rel="stylesheet" href="../assets/css/foundation/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout/container.css" />
+    <link rel="stylesheet" href="../assets/css/layout/wrapper.css" />
+    <link rel="stylesheet" href="../assets/css/layout/main.css" />
+    <link rel="stylesheet" href="../assets/css/layout/section.css" />
+    <link rel="stylesheet" href="../assets/css/layout/heading.css" />
+    <link rel="stylesheet" href="../assets/css/component/header.css" />
+    <link rel="stylesheet" href="../assets/css/component/footer.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/component/child-page-title.css"
+    />
+    <link rel="stylesheet" href="../assets/css/component/card.css" />
+    <link rel="stylesheet" href="../assets/css/component/button.css" />
+    <link rel="stylesheet" href="../assets/css/component/icon-text.css" />
+    <link rel="stylesheet" href="../assets/css/component/step.css" />
+    <link rel="stylesheet" href="../assets/css/component/news.css" />
+    <link rel="stylesheet" href="../assets/css/component/link-list.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/utility/screen-reader-text.css"
+    />
+    <link rel="stylesheet" href="../assets/css/utility/display.css" />
+    <link rel="stylesheet" href="../assets/css/utility/text-align.css" />
+    <link rel="stylesheet" href="../assets/css/utility/text-link.css" />
+    <link rel="stylesheet" href="../assets/css/utility/list.css" />
+    <link rel="stylesheet" href="../assets/css/utility/margin.css" />
+    <link rel="stylesheet" href="../assets/css/utility/font-size.css" />
+    <link rel="stylesheet" href="../assets/css/pages/column.css" />
+    <!-- / CSS -->
+    <!-- js -->
+    <script src="../assets/js/jquery-3.7.0.min.js" defer></script>
+    <script type="module" src="../assets/js/index.js" defer></script>
+    <!-- / js -->
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <!-- header -->
+      <header class="c-header" id="js-header">
+        <div class="c-header__container">
+          <p class="c-header__siteName">
+            <a class="c-header__siteNameLink" href="/">
+              <img
+                src="../assets/images/logo.svg"
+                alt="KANTAN! CMS STARTER for Beginner"
+                width="190"
+                height="28"
+              />
+            </a>
+          </p>
+
+          <button class="c-headerMobileButton" id="js-mobileMenuButton">
+            <span class="c-headerMobileButton__line">
+              <span class="u-screenReaderText">メニューを開閉する</span>
+            </span>
+          </button>
+
+          <div class="c-headerMenuWrapper" id="js-mobileMenu">
+            <nav class="c-headerMenu">
+              <ul class="c-headerMenuList">
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="#!">機能紹介</a>
+                </li>
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="../flow/"
+                    >公開までの流れ</a
+                  >
+                </li>
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="../column/"
+                    >お役立ちコラム</a
+                  >
+                </li>
+                <li class="c-headerMenuList__item c-headerMenuList__item--cta">
+                  <a
+                    class="c-headerMenuList__ctaLink"
+                    href="#!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >テンプレートから作成</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- / header -->
+
+      <div class="l-main">
+        <!-- page title -->
+        <div class="c-childPageTitle">
+          <h1 class="c-childPageTitle__text">
+            HTMLを挿入するだけでできるパーツの紹介
+          </h1>
+        </div>
+        <!-- / page title -->
+
+        <!-- main -->
+        <main>
+          <div class="p-columnPost">
+            <div class="l-container l-container--medium">
+              <div class="p-columnPostDate u-fz-sp-small">
+                <p class="c-iconText">
+                  <img
+                    class="c-iconText__icon"
+                    src="../assets/images/icon_pen.svg"
+                    alt="投稿日"
+                    width="20"
+                    height="20"
+                  />
+                  <span>2023.06.24</span>
+                </p>
+                <p class="c-iconText">
+                  <img
+                    class="c-iconText__icon"
+                    src="../assets/images/icon_update.svg"
+                    alt="更新日"
+                    width="20"
+                    height="20"
+                  />
+                  <span>2023.06.24</span>
+                </p>
+              </div>
+
+              <figure class="p-columnThumbnail">
+                <img
+                  src="https://placehold.jp/325x194.png"
+                  alt=""
+                  width=""
+                  height=""
+                />
+              </figure>
+            </div>
+          </div>
+        </main>
+        <!-- / main -->
+      </div>
+
+      <!-- footer -->
+      <footer class="c-footer">
+        <div class="l-container">
+          <div class="c-footer__upper">
+            <p class="c-footer__logo">
+              <a href="/">
+                <img
+                  src="../assets/images/logo_large.svg"
+                  alt="KANTAN! CMS STARTER for Beginner"
+                  width="220"
+                  height="119"
+                />
+              </a>
+            </p>
+
+            <nav>
+              <div class="c-footer__sitemap">
+                <ul class="u-list-hyphen u-fz-sp-small">
+                  <li><a href="#!">機能紹介</a></li>
+                  <li><a href="#!">公開までの流れ</a></li>
+                  <li>
+                    <a href="#!">お役立ちコラム</a>
+                    <ul class="u-list-hyphen u-mt-sp-8">
+                      <li><a href="#!">お問い合わせフォームを実装したい</a></li>
+                      <li>
+                        <a href="#!"
+                          >ブログ機能をつけたい（microCMSのカスタマイズ）</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="u-list-hyphen u-fz-sp-small">
+                  <li><a href="../news/">お知らせ</a></li>
+                  <li><a href="../contact/">お問い合わせ</a></li>
+                  <li><a href="../privacy-policy/">プライバシーポリシー</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <p class="c-footer__copyright">
+          <small>©︎ 2023 KANTAN! CMS STARTER All right reserved.</small>
+        </p>
+      </footer>
+      <!-- / footer -->
+    </div>
+  </body>
+</html>

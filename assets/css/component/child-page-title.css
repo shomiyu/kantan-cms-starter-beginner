@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  子ページ 大見出し
+--------------------------------------------------------- */
+
+.c-childPageTitle {
+  background-color: var(--color-bg-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  padding: 40px 24px;
+}
+
+.c-childPageTitle__text {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+  .c-childPageTitle {
+    padding: 40px 80px;
+  }
+
+  .c-childPageTitle__text {
+    font-size: 40px;
+  }
+}

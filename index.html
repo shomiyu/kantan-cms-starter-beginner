@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/foundation/reset.css" />
     <link rel="stylesheet" href="./assets/css/foundation/base.css" />
+    <link rel="stylesheet" href="./assets/css/layout/wrapper.css" />
     <link rel="stylesheet" href="./assets/css/layout/container.css" />
     <link rel="stylesheet" href="./assets/css/layout/main.css" />
     <link rel="stylesheet" href="./assets/css/layout/section.css" />
@@ -34,508 +35,516 @@
     <!-- / js -->
   </head>
   <body>
-    <header class="c-header" id="js-header">
-      <div class="c-header__container">
-        <h1 class="c-header__siteName">
-          <a class="c-header__siteNameLink" href="/">
-            <img
-              src="./assets/images/logo.svg"
-              alt="KANTAN! CMS STARTER for Beginner"
-              width="190"
-              height="28"
-            />
-          </a>
-        </h1>
-
-        <button class="c-headerMobileButton" id="js-mobileMenuButton">
-          <span class="c-headerMobileButton__line">
-            <span class="u-screenReaderText">メニューを開閉する</span>
-          </span>
-        </button>
-
-        <div class="c-headerMenuWrapper" id="js-mobileMenu">
-          <nav class="c-headerMenu">
-            <ul class="c-headerMenuList">
-              <li class="c-headerMenuList__item">
-                <a class="c-headerMenuList__link" href="#!">機能紹介</a>
-              </li>
-              <li class="c-headerMenuList__item">
-                <a class="c-headerMenuList__link" href="#!">公開までの流れ</a>
-              </li>
-              <li class="c-headerMenuList__item">
-                <a class="c-headerMenuList__link" href="#!">お役立ちコラム</a>
-              </li>
-              <li class="c-headerMenuList__item c-headerMenuList__item--cta">
-                <a
-                  class="c-headerMenuList__ctaLink"
-                  href="#!"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >テンプレートから作成</a
-                >
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-
-    <main class="l-main">
-      <div class="p-mainViual">
-        <figure class="p-mainViual__image">
-          <img
-            src="https://placehold.jp/1024x592.png"
-            alt="ダミー"
-            width="1024"
-            height="592"
-          />
-        </figure>
-
-        <p class="p-mainViual__text">
-          <span>HTMLとCSSとjQueryでつくる。</span>
-          <span>コンテンツ管理ができる。</span>
-          <span>すばやく公開する。</span>
-        </p>
-      </div>
-
-      <!-- 導入 -->
-      <section class="l-sectionPrimary">
-        <div class="l-container">
-          <h2 class="l-headingPrimary">
-            CMSなのに<br
-              class="u-display-spOnly"
-            />難しい技術はいらない。<br />必要なのはHTMLとCSS<br />ときどきjQuery。
-          </h2>
-          <div class="p-topIntroductionTextContents">
-            <p>
-              お知らせ機能をつけるだけなのに<br
-                class="u-display-spOnly"
-              />WordPressで作る必要はあるのか？<br />WordPressが難しくて挫折した経験はないか？
-            </p>
-            <p>HTMLとCSSだけでいい。<br />サーバーだってなんでもいい。</p>
-            <p>そんなCMSがあったら、よくない？</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 特徴 -->
-      <section class="l-sectionPrimary l-sectionPrimary--gray">
-        <div class="l-container">
-          <h2 class="p-topFeatureHeading">
-            KANTAN! CMS STARTER
-            <span class="p-topFeatureHeading__labelWrapper">
-              <span class="p-topFeatureHeading__label">for Beginner</span>
-            </span>
-            いいところ
-          </h2>
-
-          <ul class="p-topFeatureList">
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">シンプル イズ ザ ベスト。</h3>
-                    <p class="c-card__text">
-                      シンプルデザインで汎用性高し。<br />HTMLとCSSで自分好みにカスタマイズしよう。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">
-                      jQueryを触りたくなければそれも良し。
-                    </h3>
-                    <p class="c-card__text">
-                      テンプレートだからデザイン以外は完成済み。jQueryを使っているけど、CMSの機能でいじる機会はほぼなし。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">
-                      サーバーに制限なし。選ぶのは君だ。
-                    </h3>
-                    <p class="c-card__text">
-                      サーバーにPHPやMySQLのようなソフトウェアが入っている必要はない。WEBサーバーであれば無料のものでもなんでもいい。選ばれるのではなく、自分で選ぶのだ。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">
-                      お問い合わせ機能もHTMLの知識だけ。
-                    </h3>
-                    <p class="c-card__text">
-                      お問い合わせ機能は外部フォームサービスを使用するから、HTMLでフォームを作るだけ。もちろんGoogle
-                      Formを埋め込んでもいい。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">
-                      SEO設定にこだわりたい？<br />それもOK。
-                    </h3>
-                    <p class="c-card__text">
-                      全体のページ設定はもちろん、CMSで管理するページの詳細設定も管理画面から。<br />こだわりたければトコトンこだわるが良し。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">
-                      話題のヘッドレスCMSですばやく構築、公開。
-                    </h3>
-                    <p class="c-card__text">
-                      microCMSによるコンテンツ管理で、ラクラク入稿。<br />テンプレート機能ですばやく構築できる。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-          </ul>
-
-          <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
-            <a class="c-button" href="#!">機能について詳しく見る</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 流れ -->
-      <section class="l-sectionPrimary">
-        <div class="l-container l-container--medium">
-          <h2 class="l-headingPrimary">サイトの構築から公開まで</h2>
-          <ol class="p-topFlow c-step">
-            <li class="c-step__item">
-              <dl>
-                <dt class="c-step__title">連携する各アカウントの確認・登録</dt>
-                <dd class="c-step__text">
-                  <p>
-                    コンテンツ管理に「<a
-                      href="https://app.microcms.io"
-                      class="u-link-external"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >microCMS</a
-                    >」を使用しているので、初めての人は事前にアカウント登録をしておこう。
-                  </p>
-                  <p>
-                    また、テンプレートのHTMLとCSSはビッグバンのように無から生まれるわけではない。<br />オンラインでソースコードを管理・共有できるサービス、「<a
-                      href="https://github.co.jp/"
-                      class="u-link-external"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >GitHub</a
-                    >」を使用しての連携が必要となる。<br />こちらもアカウントをまだ持っていなければ登録しておこう。
-                  </p>
-                  <p>なにごとも準備は大事だ。</p>
-                </dd>
-              </dl>
-            </li>
-            <li class="c-step__item">
-              <dl>
-                <dt class="c-step__title">テンプレートのセットアップ</dt>
-                <dd class="c-step__text">
-                  <p>
-                    <a
-                      class="u-link-external"
-                      href="#!"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >microCMSのテンプレートサービス</a
-                    >にアクセスしよう。
-                  </p>
-                  <p>
-                    「このテンプレートを利用」のボタンで次のページに進み、GitHubと連携を行おう。<br />連携時の設定は全てデフォルトでOK。
-                  </p>
-                  <figure>
-                    <img
-                      src="./assets/images/img_flow_02.jpg"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                    <figcaption>GitHub連携後の設定</figcaption>
-                  </figure>
-                  <p>
-                    画像を参考に必要な項目の設定を行う。<br />ソースコードをオンラインで公開したくない場合は、「プライベートリポジトリとして作成する」にチェックを入れて次に進もう。
-                  </p>
-                  <p>
-                    問題なければセットアップが完了して、microCMSのサービスとGitHubのリポジトリが自動で作成されているはず。<br />この画面の内容は後ほど使うのでまだ閉じないでおこう。
-                  </p>
-                </dd>
-              </dl>
-            </li>
-            <li class="c-step__item">
-              <dl>
-                <dt class="c-step__title">ソースコードの準備</dt>
-                <dd class="c-step__text">
-                  <p>
-                    セットアップ完了画面に表示されているGitHubのページに移動して、ファイルをダウンロード・解凍しよう。
-                  </p>
-                </dd>
-              </dl>
-            </li>
-            <li class="c-step__item">
-              <dl>
-                <dt class="c-step__title">microCMSと連携</dt>
-                <dd class="c-step__text"></dd>
-              </dl>
-            </li>
-            <li class="c-step__item">
-              <dl>
-                <dt class="c-step__title">カスタマイズ</dt>
-                <dd class="c-step__text">
-                  <p>
-                    持ち前のHTMLとCSSでサイトを自由にカスタマイズしよう。<br />好きな色にしたり、好きなレイアウトに変えたり、もちろんテキストを変えるだけでも。
-                  </p>
-                  <p>
-                    お問い合わせフォームの導入やmicroCMSのカスタマイズは別のページで紹介しているので、必要であれば見てほしい。
-                  </p>
-                </dd>
-              </dl>
-            </li>
-            <li class="c-step__item">
-              <dl>
-                <dt class="c-step__title">コンテンツの入稿・動作確認</dt>
-                <dd class="c-step__text">
-                  <p>
-                    microCMSから記事を投稿してきちんと表示されるか確認しよう。<br />お問い合わせフォームの送受信テストやメタ情報周りの設定確認も忘れずに。
-                  </p>
-                </dd>
-              </dl>
-            </li>
-            <li class="c-step__item">
-              <dl>
-                <dt class="c-step__title">リリース</dt>
-                <dd class="c-step__text">
-                  <p>ここまできたらいよいよ公開だ。</p>
-                  <p>
-                    サーバーはなんでも良いけどオススメはNetlifyやVercel。英語のサイトでジンマシンが出る人もいるかもしれないけど、小さいサイトであれば基本的にはずっと無料で使える。
-                  </p>
-                  <p>
-                    もちろん、すでに契約中のサーバーにFTPでアップロードしてもOK。
-                  </p>
-                </dd>
-              </dl>
-            </li>
-            <li class="c-step__item">
-              <p class="c-step__title">
-                おめでとう、サイトの完成だ。<br />だけどこれは終わりの始まり。たくさん運用して育ててほしい。
-              </p>
-            </li>
-          </ol>
-
-          <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
-            <a
-              class="c-button c-button--external"
-              href="#!"
-              target="_blank"
-              rel="noopener noreferrer"
-              >microCMSテンプレートへ</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- お知らせ -->
-      <section class="l-sectionPrimary l-sectionPrimary--gray">
-        <div class="l-container l-container--small">
-          <h2 class="l-headingPrimary">お知らせ</h2>
-          <div id="js-getNewsList"></div>
-
-          <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
-            <a class="c-button" href="./news/">もっとみる</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- コラム -->
-      <section class="l-sectionPrimary">
-        <div class="l-container l-container--medium">
-          <h2 class="l-headingPrimary">お役立ちコラム</h2>
-          <div id="js-getColumnList"></div>
-        </div>
-      </section>
-
-      <!-- シリーズ告知 -->
-      <section class="l-sectionPrimary l-sectionPrimary--gray">
-        <div class="l-container l-container--medium">
-          <h2 class="l-headingPrimary">
-            得意な技術でCMSを始めよう<br />KANTAN! CMS STARTER<br
-              class="u-display-spOnly"
-            />シリーズ
-          </h2>
-
-          <ul class="p-topSeriesList">
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">for Beginner</h3>
-                    <ul class="c-card__tagList u-mt-sp-8 u-mb-sp-8">
-                      <li><span class="c-card__tag">HTML</span></li>
-                      <li><span class="c-card__tag">CSS</span></li>
-                      <li><span class="c-card__tag">jQuery</span></li>
-                    </ul>
-                    <p class="c-card__text">
-                      HTMLとCSSが書ければCMSができてしまう、初学者の強い味方。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-            <li>
-              <section class="c-card">
-                <div class="c-card__inner">
-                  <div class="c-card__textContents">
-                    <h3 class="c-card__title">for Webpack</h3>
-                    <ul class="c-card__tagList u-mt-sp-8 u-mb-sp-8">
-                      <li><span class="c-card__tag">Pug</span></li>
-                      <li><span class="c-card__tag">HTML</span></li>
-                      <li><span class="c-card__tag">Sass</span></li>
-                      <li><span class="c-card__tag">CSS</span></li>
-                      <li><span class="c-card__tag">jQuery</span></li>
-                    </ul>
-                    <p class="c-card__text">
-                      PugやSassを使って効率重視で開発したい方向けに。
-                    </p>
-                  </div>
-                  <figure class="c-card__image">
-                    <img
-                      src="https://placehold.jp/325x194.png"
-                      alt=""
-                      width=""
-                      height=""
-                    />
-                  </figure>
-                </div>
-              </section>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-
-    <footer class="c-footer">
-      <div class="l-container">
-        <div class="c-footer__upper">
-          <p class="c-footer__logo">
-            <a href="/">
+    <div class="l-wrapper">
+      <header class="c-header" id="js-header">
+        <div class="c-header__container">
+          <h1 class="c-header__siteName">
+            <a class="c-header__siteNameLink" href="/">
               <img
-                src="./assets/images/logo_large.svg"
+                src="./assets/images/logo.svg"
                 alt="KANTAN! CMS STARTER for Beginner"
-                width="220"
-                height="119"
+                width="190"
+                height="28"
               />
             </a>
-          </p>
+          </h1>
 
-          <nav>
-            <div class="c-footer__sitemap">
-              <ul class="u-list-hyphen u-fz-sp-small">
-                <li><a href="#!">機能紹介</a></li>
-                <li><a href="#!">公開までの流れ</a></li>
-                <li>
-                  <a href="#!">お役立ちコラム</a>
-                  <ul class="u-list-hyphen u-mt-sp-8">
-                    <li><a href="#!">お問い合わせフォームを実装したい</a></li>
-                    <li>
-                      <a href="#!"
-                        >ブログ機能をつけたい（microCMSのカスタマイズ）</a
-                      >
-                    </li>
-                  </ul>
+          <button class="c-headerMobileButton" id="js-mobileMenuButton">
+            <span class="c-headerMobileButton__line">
+              <span class="u-screenReaderText">メニューを開閉する</span>
+            </span>
+          </button>
+
+          <div class="c-headerMenuWrapper" id="js-mobileMenu">
+            <nav class="c-headerMenu">
+              <ul class="c-headerMenuList">
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="#!">機能紹介</a>
+                </li>
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="./flow/"
+                    >公開までの流れ</a
+                  >
+                </li>
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="./column/"
+                    >お役立ちコラム</a
+                  >
+                </li>
+                <li class="c-headerMenuList__item c-headerMenuList__item--cta">
+                  <a
+                    class="c-headerMenuList__ctaLink"
+                    href="#!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >テンプレートから作成</a
+                  >
                 </li>
               </ul>
-              <ul class="u-list-hyphen u-fz-sp-small">
-                <li><a href="#!">お知らせ</a></li>
-                <li><a href="#!">お問い合わせ</a></li>
-                <li><a href="#!">プライバシーポリシー</a></li>
-              </ul>
-            </div>
-          </nav>
+            </nav>
+          </div>
         </div>
-      </div>
-      <p class="c-footer__copyright">
-        <small>©︎ 2023 KANTAN! CMS STARTER All right reserved.</small>
-      </p>
-    </footer>
+      </header>
+
+      <main class="l-main">
+        <div class="p-mainViual">
+          <figure class="p-mainViual__image">
+            <img
+              src="https://placehold.jp/1024x592.png"
+              alt="ダミー"
+              width="1024"
+              height="592"
+            />
+          </figure>
+
+          <p class="p-mainViual__text">
+            <span>HTMLとCSSとjQueryでつくる。</span>
+            <span>コンテンツ管理ができる。</span>
+            <span>すばやく公開する。</span>
+          </p>
+        </div>
+
+        <!-- 導入 -->
+        <section class="l-sectionPrimary">
+          <div class="l-container">
+            <h2 class="l-headingPrimary">
+              CMSなのに<br
+                class="u-display-spOnly"
+              />難しい技術はいらない。<br />必要なのはHTMLとCSS<br />ときどきjQuery。
+            </h2>
+            <div class="p-topIntroductionTextContents">
+              <p>
+                お知らせ機能をつけるだけなのに<br
+                  class="u-display-spOnly"
+                />WordPressで作る必要はあるのか？<br />WordPressが難しくて挫折した経験はないか？
+              </p>
+              <p>HTMLとCSSだけでいい。<br />サーバーだってなんでもいい。</p>
+              <p>そんなCMSがあったら、よくない？</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 特徴 -->
+        <section class="l-sectionPrimary l-sectionPrimary--gray">
+          <div class="l-container">
+            <h2 class="p-topFeatureHeading">
+              KANTAN! CMS STARTER
+              <span class="p-topFeatureHeading__labelWrapper">
+                <span class="p-topFeatureHeading__label">for Beginner</span>
+              </span>
+              いいところ
+            </h2>
+
+            <ul class="p-topFeatureList">
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">シンプル イズ ザ ベスト。</h3>
+                      <p class="c-card__text">
+                        シンプルデザインで汎用性高し。<br />HTMLとCSSで自分好みにカスタマイズしよう。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">
+                        jQueryを触りたくなければそれも良し。
+                      </h3>
+                      <p class="c-card__text">
+                        テンプレートだからデザイン以外は完成済み。jQueryを使っているけど、CMSの機能でいじる機会はほぼなし。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">
+                        サーバーに制限なし。選ぶのは君だ。
+                      </h3>
+                      <p class="c-card__text">
+                        サーバーにPHPやMySQLのようなソフトウェアが入っている必要はない。WEBサーバーであれば無料のものでもなんでもいい。選ばれるのではなく、自分で選ぶのだ。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">
+                        お問い合わせ機能もHTMLの知識だけ。
+                      </h3>
+                      <p class="c-card__text">
+                        お問い合わせ機能は外部フォームサービスを使用するから、HTMLでフォームを作るだけ。もちろんGoogle
+                        Formを埋め込んでもいい。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">
+                        SEO設定にこだわりたい？<br />それもOK。
+                      </h3>
+                      <p class="c-card__text">
+                        全体のページ設定はもちろん、CMSで管理するページの詳細設定も管理画面から。<br />こだわりたければトコトンこだわるが良し。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">
+                        話題のヘッドレスCMSですばやく構築、公開。
+                      </h3>
+                      <p class="c-card__text">
+                        microCMSによるコンテンツ管理で、ラクラク入稿。<br />テンプレート機能ですばやく構築できる。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+            </ul>
+
+            <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
+              <a class="c-button" href="#!">機能について詳しく見る</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 流れ -->
+        <section class="l-sectionPrimary">
+          <div class="l-container l-container--medium">
+            <h2 class="l-headingPrimary">サイトの構築から公開まで</h2>
+            <ol class="p-topFlow c-step">
+              <li class="c-step__item">
+                <dl>
+                  <dt class="c-step__title">
+                    連携する各アカウントの確認・登録
+                  </dt>
+                  <dd class="c-step__text">
+                    <p>
+                      コンテンツ管理に「<a
+                        href="https://app.microcms.io"
+                        class="u-link-external"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >microCMS</a
+                      >」を使用しているので、初めての人は事前にアカウント登録をしておこう。
+                    </p>
+                    <p>
+                      また、テンプレートのHTMLとCSSはビッグバンのように無から生まれるわけではない。<br />オンラインでソースコードを管理・共有できるサービス、「<a
+                        href="https://github.co.jp/"
+                        class="u-link-external"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GitHub</a
+                      >」を使用しての連携が必要となる。<br />こちらもアカウントをまだ持っていなければ登録しておこう。
+                    </p>
+                    <p>なにごとも準備は大事だ。</p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-step__item">
+                <dl>
+                  <dt class="c-step__title">テンプレートのセットアップ</dt>
+                  <dd class="c-step__text">
+                    <p>
+                      <a
+                        class="u-link-external"
+                        href="#!"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >microCMSのテンプレートサービス</a
+                      >にアクセスしよう。
+                    </p>
+                    <p>
+                      「このテンプレートを利用」のボタンで次のページに進み、GitHubと連携を行おう。<br />連携時の設定は全てデフォルトでOK。
+                    </p>
+                    <figure>
+                      <img
+                        src="./assets/images/img_flow_02.jpg"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                      <figcaption>GitHub連携後の設定</figcaption>
+                    </figure>
+                    <p>
+                      画像を参考に必要な項目の設定を行う。<br />ソースコードをオンラインで公開したくない場合は、「プライベートリポジトリとして作成する」にチェックを入れて次に進もう。
+                    </p>
+                    <p>
+                      問題なければセットアップが完了して、microCMSのサービスとGitHubのリポジトリが自動で作成されているはず。<br />この画面の内容は後ほど使うのでまだ閉じないでおこう。
+                    </p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-step__item">
+                <dl>
+                  <dt class="c-step__title">ソースコードの準備</dt>
+                  <dd class="c-step__text">
+                    <p>
+                      セットアップ完了画面に表示されているGitHubのページに移動して、ファイルをダウンロード・解凍しよう。
+                    </p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-step__item">
+                <dl>
+                  <dt class="c-step__title">microCMSと連携</dt>
+                  <dd class="c-step__text"></dd>
+                </dl>
+              </li>
+              <li class="c-step__item">
+                <dl>
+                  <dt class="c-step__title">カスタマイズ</dt>
+                  <dd class="c-step__text">
+                    <p>
+                      持ち前のHTMLとCSSでサイトを自由にカスタマイズしよう。<br />好きな色にしたり、好きなレイアウトに変えたり、もちろんテキストを変えるだけでも。
+                    </p>
+                    <p>
+                      お問い合わせフォームの導入やmicroCMSのカスタマイズは別のページで紹介しているので、必要であれば見てほしい。
+                    </p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-step__item">
+                <dl>
+                  <dt class="c-step__title">コンテンツの入稿・動作確認</dt>
+                  <dd class="c-step__text">
+                    <p>
+                      microCMSから記事を投稿してきちんと表示されるか確認しよう。<br />お問い合わせフォームの送受信テストやメタ情報周りの設定確認も忘れずに。
+                    </p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-step__item">
+                <dl>
+                  <dt class="c-step__title">リリース</dt>
+                  <dd class="c-step__text">
+                    <p>ここまできたらいよいよ公開だ。</p>
+                    <p>
+                      サーバーはなんでも良いけどオススメはNetlifyやVercel。英語のサイトでジンマシンが出る人もいるかもしれないけど、小さいサイトであれば基本的にはずっと無料で使える。
+                    </p>
+                    <p>
+                      もちろん、すでに契約中のサーバーにFTPでアップロードしてもOK。
+                    </p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-step__item">
+                <p class="c-step__title">
+                  おめでとう、サイトの完成だ。<br />だけどこれは終わりの始まり。たくさん運用して育ててほしい。
+                </p>
+              </li>
+            </ol>
+
+            <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
+              <a
+                class="c-button c-button--external"
+                href="#!"
+                target="_blank"
+                rel="noopener noreferrer"
+                >microCMSテンプレートへ</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- お知らせ -->
+        <section class="l-sectionPrimary l-sectionPrimary--gray">
+          <div class="l-container l-container--small">
+            <h2 class="l-headingPrimary">お知らせ</h2>
+            <div id="js-getNewsList"></div>
+
+            <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
+              <a class="c-button" href="./news/">もっとみる</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- コラム -->
+        <section class="l-sectionPrimary">
+          <div class="l-container l-container--medium">
+            <h2 class="l-headingPrimary">お役立ちコラム</h2>
+            <div id="js-getColumnList"></div>
+          </div>
+        </section>
+
+        <!-- シリーズ告知 -->
+        <section class="l-sectionPrimary l-sectionPrimary--gray">
+          <div class="l-container l-container--medium">
+            <h2 class="l-headingPrimary">
+              得意な技術でCMSを始めよう<br />KANTAN! CMS STARTER<br
+                class="u-display-spOnly"
+              />シリーズ
+            </h2>
+
+            <ul class="p-topSeriesList">
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">for Beginner</h3>
+                      <ul class="c-card__tagList u-mt-sp-8 u-mb-sp-8">
+                        <li><span class="c-card__tag">HTML</span></li>
+                        <li><span class="c-card__tag">CSS</span></li>
+                        <li><span class="c-card__tag">jQuery</span></li>
+                      </ul>
+                      <p class="c-card__text">
+                        HTMLとCSSが書ければCMSができてしまう、初学者の強い味方。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+              <li>
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">for Webpack</h3>
+                      <ul class="c-card__tagList u-mt-sp-8 u-mb-sp-8">
+                        <li><span class="c-card__tag">Pug</span></li>
+                        <li><span class="c-card__tag">HTML</span></li>
+                        <li><span class="c-card__tag">Sass</span></li>
+                        <li><span class="c-card__tag">CSS</span></li>
+                        <li><span class="c-card__tag">jQuery</span></li>
+                      </ul>
+                      <p class="c-card__text">
+                        PugやSassを使って効率重視で開発したい方向けに。
+                      </p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="https://placehold.jp/325x194.png"
+                        alt=""
+                        width=""
+                        height=""
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="c-footer">
+        <div class="l-container">
+          <div class="c-footer__upper">
+            <p class="c-footer__logo">
+              <a href="/">
+                <img
+                  src="./assets/images/logo_large.svg"
+                  alt="KANTAN! CMS STARTER for Beginner"
+                  width="220"
+                  height="119"
+                />
+              </a>
+            </p>
+
+            <nav>
+              <div class="c-footer__sitemap">
+                <ul class="u-list-hyphen u-fz-sp-small">
+                  <li><a href="#!">機能紹介</a></li>
+                  <li><a href="#!">公開までの流れ</a></li>
+                  <li>
+                    <a href="#!">お役立ちコラム</a>
+                    <ul class="u-list-hyphen u-mt-sp-8">
+                      <li><a href="#!">お問い合わせフォームを実装したい</a></li>
+                      <li>
+                        <a href="#!"
+                          >ブログ機能をつけたい（microCMSのカスタマイズ）</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="u-list-hyphen u-fz-sp-small">
+                  <li><a href="./news/">お知らせ</a></li>
+                  <li><a href="./contact/">お問い合わせ</a></li>
+                  <li><a href="./privacy-policy/">プライバシーポリシー</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <p class="c-footer__copyright">
+          <small>©︎ 2023 KANTAN! CMS STARTER All right reserved.</small>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
