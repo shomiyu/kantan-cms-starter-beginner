@@ -2,6 +2,7 @@ import { headerMenu } from "./modules/header-menu.js";
 import { getSettings } from "./modules/get-settings.js";
 import { getNewsList } from "./modules/get-news-list.js";
 import { getColumnList } from "./modules/get-column-list.js";
+import { getColumnDetail } from "./modules/get-column-details.js";
 
 $(function () {
   // microCMSの設定反映
@@ -15,4 +16,7 @@ $(function () {
 
   // コラム一覧を取得
   getColumnList();
+
+  // コラム詳細を取得
+  getColumnDetail();
 });

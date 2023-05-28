@@ -32,3 +32,26 @@
   right: 4px;
   transform: translateY(-50%);
 }
+
+/* 左側に矢印 */
+.u-link-leftArrow {
+  line-height: 1.5;
+  display: inline-block;
+  position: relative;
+  padding-left: calc(1.5em + 4px);
+}
+
+.u-link-leftArrow::after {
+  content: "";
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("../../images/icon_arrow_left_bk.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: calc(50% + 2px);
+  left: 0;
+  transform: translateY(-50%);
+}

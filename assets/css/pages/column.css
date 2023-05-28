@@ -8,6 +8,9 @@
 
 .p-columnThumbnail {
   margin-bottom: 8px;
+  box-shadow: var(--shadow-primary);
+  border-radius: var(--border-radius-primary);
+  overflow: hidden;
 }
 
 .p-columnThumbnail img {
@@ -19,6 +22,17 @@
   gap: 24px;
   padding-bottom: 8px;
   margin-bottom: 48px;
+}
+
+.p-columnBottomLink {
+  margin-top: 40px;
+  border-top: 1px solid;
+  padding-top: 24px;
+}
+
+/* 投稿記事 */
+.p-columnPost {
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 768px) {

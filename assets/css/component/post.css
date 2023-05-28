@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  投稿 スタイル
+--------------------------------------------------------- */
+
+/* 最初の要素だけ上部余白を適用しない */
+#js-post > :first-child {
+  margin-top: 0;
+}
+
+.c-post {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/*
+  見出し
+---------------------------------------------- */
+.c-post h1,
+.c-post h2,
+.c-post h3,
+.c-post h4 {
+  line-height: 1.5;
+}
+
+.c-post h1 {
+  font-size: 28px;
+  margin-top: 1.429em;
+  margin-bottom: 0.857em;
+}
+
+.c-post h2 {
+  font-size: 24px;
+  margin-top: 1.667em;
+  margin-bottom: 1em;
+}
+
+.c-post h3 {
+  font-size: 20px;
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+}
+
+.c-post h4 {
+  font-size: 16px;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+/*
+  段落
+---------------------------------------------- */
+.c-post p {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+/*
+  リスト
+---------------------------------------------- */
+.c-post ul,
+.c-post ol {
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+/*
+  図表、挿絵
+---------------------------------------------- */
+.c-post figure {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.c-post figcaption {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/*
+  テーブル
+---------------------------------------------- */
+.c-post table {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/*
+  テキストリンク
+---------------------------------------------- */
+.c-post a {
+  text-decoration: underline;
+}
+
+.c-post a[target="_blank"] {
+  display: inline-block;
+  padding-right: calc(4px + 1em + 4px);
+  position: relative;
+}
+
+.c-post a[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-image: url("../../images/icon_external_link_bk.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: calc(1em * 1.7 / 2);
+  transform: translateY(-50%);
+  right: 4px;
+}
+
+/*
+  インラインコード
+---------------------------------------------- */
+.c-post p code {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.2;
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #000;
+  border-radius: 2px;
+  margin: 0 4px;
+  position: relative;
+  top: -2px;
+}
+
+/*
+  コードブロック
+---------------------------------------------- */
+.c-post pre {
+  color: #fff;
+  background-color: #000;
+  border-radius: var(--border-radius-primary);
+  padding: 24px;
+  overflow: scroll;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.c-post [data-filename] {
+  position: relative;
+}
+
+.c-post [data-filename]::after {
+  color: #fff;
+  content: attr(data-filename);
+  display: block;
+  width: 100%;
+  padding: 4px 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c-post [data-filename] pre {
+  padding-top: 40px;
+}
+
+/*
+  引用
+---------------------------------------------- */
+
+/*
+  区切り線
+---------------------------------------------- */
+.c-post hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-post {
+    font-size: 16px;
+  }
+
+  .c-post figcaption {
+    font-size: 14px;
+  }
+}
