@@ -27,7 +27,6 @@ export const getNewsList = () => {
     )
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
         let insertHtml = $('<ol class="c-newsList"></ol>');
         for (const content of json.contents) {
           const date = formatDate(content.updatedAt);
