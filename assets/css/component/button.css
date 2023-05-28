@@ -6,7 +6,7 @@
 .c-button {
   color: #fff;
   line-height: 1.5;
-  background-color: #000;
+  background-color: var(--color-bg-button);
   display: inline-block;
   width: 100%;
   max-width: 380px;
