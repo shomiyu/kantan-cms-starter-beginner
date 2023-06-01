@@ -26,6 +26,9 @@ export const getColumnDetail = () => {
     )
       .then((response) => response.json())
       .then((json) => {
+        // ----------------------------------------------
+        // 投稿を出力
+        // ----------------------------------------------
         const publishedAt = formatDate(json.publishedAt);
         const updatedAt = formatDate(json.updatedAt);
         const thumbnail = json.thumbnail ?? null;
@@ -69,6 +72,50 @@ export const getColumnDetail = () => {
 
         // 投稿内容を挿入
         $("#js-post").append(json.body);
+
+        // ----------------------------------------------
+        // 同じカテゴリの記事を取得する
+        // ----------------------------------------------
+        const category = json.category[0] ?? "";
+        let fetchUrl = `https://${microcms.SERVICE_ID}.microcms.io/api/v1/column?limit=8`;
+
+        if (category !== "") {
+          fetchUrl = `https://${microcms.SERVICE_ID}.microcms.io/api/v1/column?limit=8&filters=category[contains]${category}`;
+        }
+
+        fetch(fetchUrl, {
+          headers: {
+            "X-MICROCMS-API-KEY": microcms.API_KEY,
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => {
+            // 表示されている記事を省く
+            const relatedPosts = $.map(json.contents, (item) => {
+              if (item.id !== postId) return item;
+            });
+
+            if (relatedPosts.length !== 0) {
+              // 関連記事あり
+              let insertHtml = $('<ul class="c-linkList"></ul>');
+              for (const post of relatedPosts) {
+                const addItem = `
+                <li>
+                  <a class="c-linkList__contents" href="../column/post.html?id=${post.id}">${post.title}</a>
+                </li>
+                `;
+
+                insertHtml.append(addItem);
+              }
+
+              $("#js-relatedPostList").append(insertHtml);
+            } else {
+              // 関連記事なし
+              $("#js-relatedPostList").append(
+                "<p>まだ関連する記事がありません。</p>"
+              );
+            }
+          });
       });
   });
 };
