@@ -14,12 +14,15 @@
 .c-linkList__contents {
   font-size: 14px;
   line-height: 1.5;
+  text-align: left;
   display: block;
   width: 100%;
   padding: 16px calc(8px + 24px + 4px) 16px 16px;
+  background-color: transparent;
   border: 1px solid #000;
   border-radius: 4px;
   position: relative;
+  cursor: pointer;
 }
 
 .c-linkList__contents::after {

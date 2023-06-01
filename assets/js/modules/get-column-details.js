@@ -1,5 +1,5 @@
 import { microcms } from "../microcms.js";
-import { formatDate } from "./format-date.js";
+import { formatDate } from "../functions/format-date.js";
 
 export const getColumnDetail = () => {
   // パラメーター取得関数
@@ -47,7 +47,7 @@ export const getColumnDetail = () => {
         for (const category of json.category) {
           const addItem = `
           <li>
-            <a class="c-label" href="./column/">${category}</a>
+            <span class="c-label">${category}</span>
           </li>
           `;
 

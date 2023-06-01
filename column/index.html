@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../assets/css/component/news.css" />
     <link rel="stylesheet" href="../assets/css/component/post.css" />
     <link rel="stylesheet" href="../assets/css/component/link-list.css" />
+    <link rel="stylesheet" href="../assets/css/component/sidebar.css" />
     <link
       rel="stylesheet"
       href="../assets/css/utility/screen-reader-text.css"
@@ -42,7 +43,7 @@
     <!-- / CSS -->
     <!-- js -->
     <script src="../assets/js/jquery-3.7.0.min.js" defer></script>
-    <script type="module" src="../assets/js/index.js" defer></script>
+    <script type="module" src="../assets/js/column-index.js" defer></script>
     <!-- / js -->
   </head>
   <body>
@@ -108,10 +109,19 @@
 
         <!-- main -->
         <div class="p-columnPost">
-          <div class="l-container l-container--small">
-            <main>
-              <div id="js-getColumnList"></div>
-            </main>
+          <div class="l-container">
+            <div class="l-row l-row--sidebar">
+              <main>
+                <div id="js-getCategoryName"></div>
+                <div id="js-getColumnList"></div>
+              </main>
+
+              <!-- サイドメニュー -->
+              <aside class="c-sidebar">
+                <h2 class="c-sidebar__title">カテゴリ</h2>
+                <div id="js-getCategoryList"></div>
+              </aside>
+            </div>
           </div>
         </div>
         <!-- / main -->

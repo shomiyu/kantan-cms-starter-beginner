@@ -13,6 +13,10 @@
     margin-bottom: 24px;
   }
 
+  .c-sidebar .c-linkList {
+    gap: 8px;
+  }
+
   .c-sidebar .c-linkList__contents {
     font-size: 0.875em;
     padding: 16px calc(8px + 24px + 4px) 16px 16px;
@@ -23,6 +27,6 @@
   }
 
   .c-sidebar .c-linkList__contents:hover::after {
-    transform: translate(-4px, -50%);
+    transform: translate(4px, -50%);
   }
 }
