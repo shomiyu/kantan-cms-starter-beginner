@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="../assets/css/foundation/reset.css" />
     <link rel="stylesheet" href="../assets/css/foundation/theme.css" />
     <link rel="stylesheet" href="../assets/css/foundation/base.css" />
-    <link rel="stylesheet" href="../assets/css/layout/container.css" />
     <link rel="stylesheet" href="../assets/css/layout/wrapper.css" />
+    <link rel="stylesheet" href="../assets/css/layout/container.css" />
+    <link rel="stylesheet" href="../assets/css/layout/row.css" />
     <link rel="stylesheet" href="../assets/css/layout/main.css" />
     <link rel="stylesheet" href="../assets/css/layout/section.css" />
     <link rel="stylesheet" href="../assets/css/layout/heading.css" />
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="../assets/css/component/icon-text.css" />
     <link rel="stylesheet" href="../assets/css/component/step.css" />
     <link rel="stylesheet" href="../assets/css/component/news.css" />
+    <link rel="stylesheet" href="../assets/css/component/post.css" />
     <link rel="stylesheet" href="../assets/css/component/link-list.css" />
     <link
       rel="stylesheet"
@@ -100,50 +102,18 @@
       <div class="l-main">
         <!-- page title -->
         <div class="c-childPageTitle">
-          <h1 class="c-childPageTitle__text">
-            HTMLを挿入するだけでできるパーツの紹介
-          </h1>
+          <h1 class="c-childPageTitle__text">お役立ちコラム</h1>
         </div>
         <!-- / page title -->
 
         <!-- main -->
-        <main>
-          <div class="p-columnPost">
-            <div class="l-container l-container--medium">
-              <div class="p-columnPostDate u-fz-sp-small">
-                <p class="c-iconText">
-                  <img
-                    class="c-iconText__icon"
-                    src="../assets/images/icon_pen.svg"
-                    alt="投稿日"
-                    width="20"
-                    height="20"
-                  />
-                  <span>2023.06.24</span>
-                </p>
-                <p class="c-iconText">
-                  <img
-                    class="c-iconText__icon"
-                    src="../assets/images/icon_update.svg"
-                    alt="更新日"
-                    width="20"
-                    height="20"
-                  />
-                  <span>2023.06.24</span>
-                </p>
-              </div>
-
-              <figure class="p-columnThumbnail">
-                <img
-                  src="https://placehold.jp/325x194.png"
-                  alt=""
-                  width=""
-                  height=""
-                />
-              </figure>
-            </div>
+        <div class="p-columnPost">
+          <div class="l-container l-container--small">
+            <main>
+              <div id="js-getColumnList"></div>
+            </main>
           </div>
-        </main>
+        </div>
         <!-- / main -->
       </div>
 

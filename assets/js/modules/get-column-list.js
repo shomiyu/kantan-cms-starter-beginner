@@ -19,7 +19,7 @@ export const getColumnList = () => {
         for (const content of json.contents) {
           const addItem = `
           <li>
-            <a class="c-linkList__contents" href="./column/?id=${content.id}">${content.title}</a>
+            <a class="c-linkList__contents" href="./post.html?id=${content.id}">${content.title}</a>
           </li>
           `;
 

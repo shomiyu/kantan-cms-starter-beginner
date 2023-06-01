@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  ラベル パーツ
+--------------------------------------------------------- */
+.c-label {
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  padding: 8px 16px;
+  background-color: #000;
+  border-radius: 25px;
+}

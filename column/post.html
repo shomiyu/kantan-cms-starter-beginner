@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="../assets/css/foundation/reset.css" />
     <link rel="stylesheet" href="../assets/css/foundation/theme.css" />
     <link rel="stylesheet" href="../assets/css/foundation/base.css" />
-    <link rel="stylesheet" href="../assets/css/layout/container.css" />
     <link rel="stylesheet" href="../assets/css/layout/wrapper.css" />
+    <link rel="stylesheet" href="../assets/css/layout/container.css" />
+    <link rel="stylesheet" href="../assets/css/layout/row.css" />
     <link rel="stylesheet" href="../assets/css/layout/main.css" />
     <link rel="stylesheet" href="../assets/css/layout/section.css" />
     <link rel="stylesheet" href="../assets/css/layout/heading.css" />
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="../assets/css/component/news.css" />
     <link rel="stylesheet" href="../assets/css/component/post.css" />
     <link rel="stylesheet" href="../assets/css/component/link-list.css" />
+    <link rel="stylesheet" href="../assets/css/component/label.css" />
     <link
       rel="stylesheet"
       href="../assets/css/utility/screen-reader-text.css"
@@ -101,59 +103,71 @@
       <div class="l-main">
         <!-- page title -->
         <div class="c-childPageTitle">
-          <h1 class="c-childPageTitle__text">
-            HTMLを挿入するだけでできるパーツの紹介
-          </h1>
+          <p class="c-childPageTitle__text">お役立ちコラム</p>
         </div>
         <!-- / page title -->
 
         <!-- main -->
-        <main>
-          <div class="p-columnPost">
-            <div class="l-container l-container--medium">
-              <!-- 投稿日と更新日 -->
-              <div class="p-columnPostDate u-fz-sp-small">
-                <p class="c-iconText">
-                  <img
-                    class="c-iconText__icon"
-                    src="../assets/images/icon_pen.svg"
-                    alt="投稿日"
-                    width="20"
-                    height="20"
-                  />
-                  <span id="js-publishedDate">yyyy.mm.dd</span>
-                </p>
-                <p class="c-iconText">
-                  <img
-                    class="c-iconText__icon"
-                    src="../assets/images/icon_update.svg"
-                    alt="更新日"
-                    width="20"
-                    height="20"
-                  />
-                  <time datetime="" id="js-updatedDate">yyyy.mm.dd</time>
-                </p>
-              </div>
+        <div class="p-columnPost">
+          <div class="l-container">
+            <div class="l-row l-row--sidebar">
+              <main>
+                <article>
+                  <header class="p-columnPostHeader">
+                    <div id="js-postCategory"></div>
+                    <h1 class="p-columnPostTitle" id="js-postTitle">見出し</h1>
 
-              <!-- サムネイル -->
-              <div id="js-postThumbnail"></div>
+                    <!-- 投稿日と更新日 -->
+                    <div class="p-columnPostDate u-fz-sp-small">
+                      <p class="c-iconText">
+                        <img
+                          class="c-iconText__icon"
+                          src="../assets/images/icon_pen.svg"
+                          alt="投稿日"
+                          width="20"
+                          height="20"
+                        />
+                        <span id="js-publishedDate">yyyy.mm.dd</span>
+                      </p>
+                      <p class="c-iconText">
+                        <img
+                          class="c-iconText__icon"
+                          src="../assets/images/icon_update.svg"
+                          alt="更新日"
+                          width="20"
+                          height="20"
+                        />
+                        <time datetime="" id="js-updatedDate">yyyy.mm.dd</time>
+                      </p>
+                    </div>
+                  </header>
 
-              <!-- 投稿 -->
-              <article class="c-post">
-                <div id="js-post"></div>
-              </article>
+                  <!-- サムネイル -->
+                  <div id="js-postThumbnail"></div>
 
-              <!-- 投稿下部 -->
-              <div class="p-columnBottomLink">
-                <p>
-                  <a class="u-link-leftArrow" href="../column/"
-                    >コラム一覧に戻る</a
-                  >
-                </p>
-              </div>
+                  <!-- 投稿 -->
+                  <div class="c-post">
+                    <div id="js-post"></div>
+                  </div>
+                </article>
+
+                <!-- 投稿下部 -->
+                <div class="p-columnBottomLink">
+                  <p>
+                    <a class="u-link-leftArrow" href="../column/"
+                      >コラム一覧に戻る</a
+                    >
+                  </p>
+                </div>
+              </main>
+
+              <!-- サイドメニュー -->
+              <aside>
+                <h2>関連する記事</h2>
+              </aside>
             </div>
           </div>
-        </main>
+        </div>
         <!-- / main -->
       </div>
 

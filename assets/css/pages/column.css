@@ -3,11 +3,11 @@
   コラムページ 独自スタイル
 --------------------------------------------------------- */
 .p-columnPost {
-  padding: 16px 0 80px;
+  padding: 64px 0 80px;
 }
 
 .p-columnThumbnail {
-  margin-bottom: 8px;
+  margin-bottom: 40px;
   box-shadow: var(--shadow-primary);
   border-radius: var(--border-radius-primary);
   overflow: hidden;
@@ -20,8 +20,6 @@
 .p-columnPostDate {
   display: flex;
   gap: 24px;
-  padding-bottom: 8px;
-  margin-bottom: 48px;
 }
 
 .p-columnBottomLink {
@@ -31,12 +29,33 @@
 }
 
 /* 投稿記事 */
-.p-columnPost {
-  margin-top: 40px;
+.p-columnPostHeader {
+  padding-bottom: 8px;
+  margin-bottom: 48px;
+}
+
+.p-columnPostTitle {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.5;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.p-columnPostCategories {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
   .p-columnPost {
+    padding-top: 120px;
     padding-bottom: 120px;
   }
 }

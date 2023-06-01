@@ -2,6 +2,7 @@ import { microcms } from "../microcms.js";
 import { formatDate } from "./format-date.js";
 
 export const getColumnDetail = () => {
+  // パラメーター取得関数
   const getParam = (name, url) => {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -32,6 +33,24 @@ export const getColumnDetail = () => {
         // 投稿日と更新日を設定
         $("#js-publishedDate").html(publishedAt);
         $("#js-updatedDate").attr("datetime", json.updatedAt).html(updatedAt);
+
+        // 見出しを挿入
+        $("#js-postTitle").html(json.title);
+
+        // カテゴリ挿入
+        let innertCategories = $(
+          '<ul class="p-columnPostCategories u-fz-sp-xsmall"></ul>'
+        );
+        for (const category of json.category) {
+          const addItem = `
+          <li>
+            <a class="c-label" href="./column/">${category}</a>
+          </li>
+          `;
+
+          innertCategories.append(addItem);
+        }
+        $("#js-postCategory").append(innertCategories);
 
         // サムネイルがあれば挿入
         if (thumbnail !== null) {
