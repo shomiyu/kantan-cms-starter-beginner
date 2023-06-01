@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  サイドバー パーツ
+--------------------------------------------------------- */
+
+.c-sidebar__title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .c-sidebar__title {
+    margin-bottom: 24px;
+  }
+
+  .c-sidebar .c-linkList__contents {
+    font-size: 0.875em;
+    padding: 16px calc(8px + 24px + 4px) 16px 16px;
+  }
+
+  .c-sidebar .c-linkList__contents::after {
+    right: 8px;
+  }
+
+  .c-sidebar .c-linkList__contents:hover::after {
+    transform: translate(-4px, -50%);
+  }
+}

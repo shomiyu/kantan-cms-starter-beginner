@@ -74,7 +74,7 @@ export const getColumnDetail = () => {
         $("#js-post").append(json.body);
 
         // ----------------------------------------------
-        // 同じカテゴリの記事を取得する
+        // 同じカテゴリの記事を取得する（最大8件）
         // ----------------------------------------------
         const category = json.category[0] ?? "";
         let fetchUrl = `https://${microcms.SERVICE_ID}.microcms.io/api/v1/column?limit=8`;
