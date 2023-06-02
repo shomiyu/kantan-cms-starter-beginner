@@ -1,6 +1,7 @@
 import { microcms } from "../microcms.js";
 import { formatDate } from "../functions/format-date.js";
 import { setPagination } from "../functions/set-pagination.js";
+import { switchCategory } from "../functions/switch-category.js";
 
 export const getNewsList = (path, limit) => {
   /**
@@ -135,8 +136,5 @@ export const getNewsList = (path, limit) => {
   // ----------------------------------------------
   // カテゴリ一を切り替える
   // ----------------------------------------------
-  $(document).on("click", ".js-switchCategory", function () {
-    const targetCategoryName = $(this).attr("data-category");
-    window.location.href = `./?page=1&category=${targetCategoryName}`;
-  });
+  switchCategory(".js-switchCategory");
 };

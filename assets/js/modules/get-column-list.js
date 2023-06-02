@@ -1,5 +1,6 @@
 import { microcms } from "../microcms.js";
 import { setPagination } from "../functions/set-pagination.js";
+import { switchCategory } from "../functions/switch-category.js";
 
 /**
  * ----------------------------------------------
@@ -114,8 +115,5 @@ export const getColumnList = (path, limit) => {
   // ----------------------------------------------
   // カテゴリ一を切り替える
   // ----------------------------------------------
-  $(document).on("click", ".js-switchCategory", function () {
-    const targetCategoryName = $(this).attr("data-category");
-    window.location.href = `./?page=1&category=${targetCategoryName}`;
-  });
+  switchCategory(".js-switchCategory");
 };
