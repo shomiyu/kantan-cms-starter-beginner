@@ -4,15 +4,15 @@ import { getNewsDetail } from "./modules/get-news-details.js";
 
 $(function () {
   // ----------------------------------------------
-  // コラム一覧ページ
+  // お知らせ詳細ページ
   // ----------------------------------------------
 
-  // - microCMSの設定取得
+  // microCMSの設定取得
   getSettings();
 
-  // - モバイルメニューの開閉
+  // モバイルメニューの開閉
   headerMenu();
 
-  // - お知らせ詳細を取得
+  // お知らせ詳細を取得
   getNewsDetail();
 });

@@ -11,22 +11,8 @@ import { switchCategory } from "../functions/switch-category.js";
  * ----------------------------------------------
  */
 export const getColumnList = (path, limit) => {
-  /**
-   * カテゴリ
-   * - カテゴリを増やす場合はcategoryListの配列にも追加すること
-   *
-   * @type {String[]}
-   */
+  // カテゴリを増やす場合はcategoryListにも追加する
   const categoryList = ["カスタマイズ", "機能紹介", "知識"];
-  /**
-   * ページングの情報
-   * - paramPage
-   * @type {Number}
-   * - paramCategory
-   * @type {String}
-   * - offset
-   * @type {Number}
-   */
   const paramPage =
     parseInt(new URLSearchParams(window.location.search).get("page")) || 1;
   const offset = limit * (paramPage - 1);
@@ -60,7 +46,6 @@ export const getColumnList = (path, limit) => {
     // ----------------------------------------------
     // 記事一覧を取得
     // ----------------------------------------------
-
     if (paramCategory !== "すべて") {
       fetchUrl = `https://${microcms.SERVICE_ID}.microcms.io/api/v1/column?limit=${limit}&offset=${offset}&filters=category[contains]${paramCategory}`;
     } else {

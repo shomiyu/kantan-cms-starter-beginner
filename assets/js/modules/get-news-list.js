@@ -4,14 +4,8 @@ import { setPagination } from "../functions/set-pagination.js";
 import { switchCategory } from "../functions/switch-category.js";
 
 export const getNewsList = (path, limit) => {
-  /**
-   * カテゴリ
-   * - カテゴリを増やす場合はcategoryListの配列にも追加すること
-   *
-   * @type {String[]}
-   */
+  // カテゴリを増やす場合はcategoryListにも追加する
   const categoryList = ["お知らせ", "プレスリリース"];
-
   const paramPage =
     parseInt(new URLSearchParams(window.location.search).get("page")) || 1;
   const offset = limit * (paramPage - 1);
