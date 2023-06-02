@@ -24,7 +24,9 @@ export const getColumnList = (path, limit) => {
     // ----------------------------------------------
     // カテゴリ一覧をサイドバーに挿入
     // ----------------------------------------------
-    let insertCategoryListHtml = $('<ul class="c-linkList"></ul>');
+    let insertCategoryListHtml = $(
+      '<ul class="c-linkList c-linkList--underLine"></ul>'
+    );
     insertCategoryListHtml.append(`
       <li>
         <button class="c-linkList__contents js-switchCategory" data-category="すべて">すべて</button>

@@ -17,6 +17,10 @@
     gap: 8px;
   }
 
+  .c-sidebar .c-linkList--underLine {
+    gap: 0;
+  }
+
   .c-sidebar .c-linkList__contents {
     font-size: 0.875em;
     padding: 16px calc(8px + 24px + 4px) 16px 16px;
