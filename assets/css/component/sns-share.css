@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  SNSシェア
+--------------------------------------------------------- */
+.c-snsShare {
+  background-color: #fafafa;
+  padding: 32px 24px 40px;
+}
+
+.c-snsShare__heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.c-snsShare__headingText {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  padding-right: 40px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.c-snsShare__headingText::before,
+.c-snsShare__headingText::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 32px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+}
+
+.c-snsShare__headingText::before {
+  left: 0;
+  transform: rotate(-20deg);
+}
+
+.c-snsShare__headingText::after {
+  right: 0;
+  transform: rotate(20deg);
+}
+
+.c-snsShare__lead {
+  font-size: 14px;
+  text-align: center;
+}
+
+.c-snsShare__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+.c-snsShare__button {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.c-snsShare__button:hover {
+  transform: scale(1.2);
+}

@@ -1,6 +1,7 @@
 import { headerMenu } from "./modules/header-menu.js";
 import { getSettings } from "./modules/get-settings.js";
 import { getColumnDetail } from "./modules/get-column-details.js";
+import { copyPageLink } from "./modules/copy-text.js";
 
 $(function () {
   // ----------------------------------------------
@@ -15,4 +16,7 @@ $(function () {
 
   // コラム詳細を取得
   getColumnDetail();
+
+  // コピーボタン
+  copyPageLink();
 });

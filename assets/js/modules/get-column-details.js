@@ -116,6 +116,34 @@ export const getColumnDetail = () => {
               );
             }
           });
+
+        // ----------------------------------------------
+        // SNSシェアボタンの設定
+        // ----------------------------------------------
+        const snsList = $(".js-getSnsLink");
+        const pageUrl = window.location.href;
+        const pageTitle = json.title;
+
+        for (const sns of snsList) {
+          if ($(sns).attr("data-sns") !== "") {
+            // SNS
+            let link = "";
+            if ($(sns).attr("data-sns") === "twitter") {
+              link = `https://twitter.com/share?text=${pageTitle}&url=${pageUrl}`;
+            } else if ($(sns).attr("data-sns") === "facebook") {
+              link = `http://www.facebook.com/share.php?u=${pageUrl}`;
+              $(sns).attr("href", link);
+            } else if ($(sns).attr("data-sns") === "line") {
+              link = `https://social-plugins.line.me/lineit/share?url=${pageUrl}`;
+            } else {
+              link = pageUrl;
+            }
+            $(sns).attr("href", link);
+          } else {
+            // copy button
+            $(sns).attr("data-link", pageUrl);
+          }
+        }
       });
   });
 };
