@@ -1,3 +1,11 @@
+/**
+ * ----------------------------------------------
+ * 日付のフォーマット
+ * --
+ * @param {string} dateString - 文字列型の日付
+ * @return {string}
+ * ----------------------------------------------
+ */
 export const formatDate = (dateString) => {
   const date = new Date(dateString);
   const delimiter = ".";
