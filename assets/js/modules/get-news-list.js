@@ -1,30 +1,66 @@
 import { microcms } from "../microcms.js";
+import { formatDate } from "../functions/format-date.js";
 
-export const getNewsList = () => {
-  // 日付のフォーマット関数
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const delimiter = ".";
-    return `${date.getFullYear()}${delimiter}${(date.getMonth() + 1)
-      .toString()
-      .padStart(2, "0")}${delimiter}${date
-      .getDate()
-      .toString()
-      .padStart(2, "0")}`.replace(/\n|\r/g, "");
-  };
+export const getNewsList = (path, limit) => {
+  /**
+   * カテゴリ
+   * - カテゴリを増やす場合はcategoryListの配列にも追加すること
+   *
+   * @type {String[]}
+   */
+  const categoryList = ["お知らせ", "プレスリリース"];
 
-  // 記事の取得上限数
-  const limit = 3;
+  const paramPage =
+    parseInt(new URLSearchParams(window.location.search).get("page")) || 1;
+  const offset = limit * (paramPage - 1);
+  const paramCategory =
+    new URLSearchParams(window.location.search).get("category") || "すべて";
+  let fetchUrl = `https://${microcms.SERVICE_ID}.microcms.io/api/v1/news?limit=${limit}&offset=${offset}`;
 
   $(function () {
-    fetch(
-      `https://${microcms.SERVICE_ID}.microcms.io/api/v1/news?limit=${limit}`,
-      {
-        headers: {
-          "X-MICROCMS-API-KEY": microcms.API_KEY,
-        },
+    // ----------------------------------------------
+    // カテゴリ一覧をタブに挿入
+    // ----------------------------------------------
+    let insertCategoryListHtml = $('<ul class="c-tab"></ul>');
+    insertCategoryListHtml.append(`
+      <li>
+        <button type="button" class="c-tab__button js-switchCategory" data-category="すべて">すべて</button>
+      </li>
+    `);
+
+    for (const category of categoryList) {
+      const addItem = `
+        <li>
+          <button type="button" class="c-tab__button js-switchCategory" data-category="${category}">${category}</button>
+        </li>
+      `;
+      insertCategoryListHtml.append(addItem);
+    }
+
+    $("#js-getCategoryList").append(insertCategoryListHtml);
+
+    // カレントタブのアクティブ化
+    const tabs = $(".js-switchCategory");
+    for (const tab of tabs) {
+      if ($(tab).attr("data-category") === paramCategory) {
+        $(tab).addClass("is-active");
       }
-    )
+    }
+
+    // ----------------------------------------------
+    // 記事一覧を取得
+    // ----------------------------------------------
+    if (paramCategory !== "すべて") {
+      fetchUrl = `https://${microcms.SERVICE_ID}.microcms.io/api/v1/news?limit=${limit}&offset=${offset}&filters=category[contains]${paramCategory}`;
+    } else {
+      fetchUrl = `https://${microcms.SERVICE_ID}.microcms.io/api/v1/news?limit=${limit}&offset=${offset}`;
+    }
+
+    fetch(fetchUrl, {
+      headers: {
+        "X-MICROCMS-API-KEY": microcms.API_KEY,
+      },
+    })
       .then((response) => response.json())
       .then((json) => {
         let insertHtml = $('<ol class="c-newsList"></ol>');
@@ -51,7 +87,7 @@ export const getNewsList = () => {
             // 本文あり（詳細ページにリンク）
             addItem = `
             <li class="c-newsList__item">
-              <a class="c-newsList__contents" href="./news/?id=${content.id}">
+              <a class="c-newsList__contents" href="${path}post.html?id=${content.id}">
                 <dl>
                   <dt class="c-newsList__head">
                     <time datetime="${content.updatedAt}">${date}</time>
@@ -84,6 +120,57 @@ export const getNewsList = () => {
 
         // ページに挿入
         $("#js-getNewsList").append(insertHtml);
+
+        // ----------------------------------------------
+        // ページング
+        // ----------------------------------------------
+        const totalCount = json.totalCount;
+        const pageCount = Math.ceil(totalCount / limit);
+        const pager = `<ol class="c-pagination u-mt-sp-40">${
+          // 前のページ
+          paramPage >= 2
+            ? `<li><a class="c-pagination__link" href="./?page=${
+                paramPage - 1
+              }&category=${paramCategory}"><img src="../assets/images/icon_arrow_left_bk.svg" alt="" width="24" height="24" title="前のページへ"></a></li>`
+            : ""
+        }${
+          // 数字
+          Array.from(Array(pageCount))
+            .map((noValue, index) => {
+              const targetPage = index + 1;
+              return targetPage === paramPage
+                ? `<li><span class="c-pagination__link is-current">${
+                    index + 1
+                  }</span></li>`
+                : `<li><a class="c-pagination__link number" href="./?page=${
+                    index + 1
+                  }&category=${paramCategory}">${index + 1}</a></li>`;
+            })
+            .join("\n")
+        }${
+          //次のページ
+          paramPage < pageCount
+            ? `<li><a class="c-pagination__link" href='./?page=${
+                paramPage + 1
+              }&category=${paramCategory}'><img src="../assets/images/icon_arrow_right_bk.svg" alt="" width="24" height="24" title="次のページへ"></a></li>`
+            : ""
+        }</ol>`;
+
+        // 表示件数より投稿が多いときのみページャーを表示
+        if (limit < totalCount) {
+          $("#js-paging").append(pager);
+        }
+      })
+      .catch((e) => {
+        console.log(e.message);
       });
+  });
+
+  // ----------------------------------------------
+  // カテゴリ一を切り替える
+  // ----------------------------------------------
+  $(document).on("click", ".js-switchCategory", function () {
+    const targetCategoryName = $(this).attr("data-category");
+    window.location.href = `./?page=1&category=${targetCategoryName}`;
   });
 };

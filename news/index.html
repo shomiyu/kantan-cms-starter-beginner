@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site Name</title>
+    <title>お知らせ</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/foundation/reset.css" />
     <link rel="stylesheet" href="../assets/css/foundation/theme.css" />
@@ -28,9 +28,9 @@
     <link rel="stylesheet" href="../assets/css/component/news.css" />
     <link rel="stylesheet" href="../assets/css/component/post.css" />
     <link rel="stylesheet" href="../assets/css/component/link-list.css" />
-    <link rel="stylesheet" href="../assets/css/component/label.css" />
     <link rel="stylesheet" href="../assets/css/component/sidebar.css" />
-    <link rel="stylesheet" href="../assets/css/component/sns-share.css" />
+    <link rel="stylesheet" href="../assets/css/component/pagination.css" />
+    <link rel="stylesheet" href="../assets/css/component/tab.css" />
     <link
       rel="stylesheet"
       href="../assets/css/utility/screen-reader-text.css"
@@ -45,7 +45,7 @@
     <!-- / CSS -->
     <!-- js -->
     <script src="../assets/js/jquery-3.7.0.min.js" defer></script>
-    <script type="module" src="../assets/js/column-post.js" defer></script>
+    <script type="module" src="../assets/js/news-index.js" defer></script>
     <!-- / js -->
   </head>
   <body>
@@ -105,145 +105,22 @@
       <div class="l-main">
         <!-- page title -->
         <div class="c-childPageTitle">
-          <p class="c-childPageTitle__text">お役立ちコラム</p>
+          <h1 class="c-childPageTitle__text">お知らせ</h1>
         </div>
         <!-- / page title -->
 
         <!-- main -->
         <div class="p-columnPost">
-          <div class="l-container">
-            <div class="l-row l-row--sidebar">
-              <main>
-                <article>
-                  <header class="p-columnPostHeader">
-                    <div id="js-postCategory"></div>
-                    <h1 class="p-columnPostTitle" id="js-postTitle"></h1>
+          <div class="l-container l-container--medium">
+            <!-- カテゴリー -->
+            <div id="js-getCategoryList"></div>
+          </div>
 
-                    <!-- 投稿日と更新日 -->
-                    <div class="p-columnPostDate u-fz-sp-small">
-                      <p class="c-iconText">
-                        <img
-                          class="c-iconText__icon"
-                          src="../assets/images/icon_pen.svg"
-                          alt="投稿日"
-                          width="20"
-                          height="20"
-                        />
-                        <span id="js-publishedDate"></span>
-                      </p>
-                      <p class="c-iconText">
-                        <img
-                          class="c-iconText__icon"
-                          src="../assets/images/icon_update.svg"
-                          alt="更新日"
-                          width="20"
-                          height="20"
-                        />
-                        <time datetime="" id="js-updatedDate"></time>
-                      </p>
-                    </div>
-                  </header>
-
-                  <!-- サムネイル -->
-                  <div id="js-postThumbnail"></div>
-
-                  <!-- 投稿 -->
-                  <div class="c-post">
-                    <div id="js-post"></div>
-                  </div>
-
-                  <!-- SNSシェア -->
-                  <div class="c-snsShare u-mt-sp-40 u-mt-tab-80">
-                    <section>
-                      <h2 class="c-snsShare__heading">
-                        <span class="c-snsShare__headingText">share</span>
-                      </h2>
-                      <p class="c-snsShare__lead">
-                        この記事がよかったらシェアお願いします！
-                      </p>
-                      <ul class="c-snsShare__list" id="js-snsShareList">
-                        <li>
-                          <a
-                            href=""
-                            class="c-snsShare__button js-getSnsLink"
-                            data-sns="twitter"
-                            title="Twitterでシェア"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><img
-                              src="../assets/images/icon_twitter_lg.svg"
-                              alt="Twitter"
-                              width="64"
-                              height="64"
-                          /></a>
-                        </li>
-                        <li>
-                          <a
-                            href=""
-                            class="c-snsShare__button js-getSnsLink"
-                            data-sns="facebook"
-                            title="Facebookでシェア"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><img
-                              src="../assets/images/icon_facebook_lg.svg"
-                              alt="Facebook"
-                              width="64"
-                              height="64"
-                          /></a>
-                        </li>
-                        <li>
-                          <a
-                            href=""
-                            class="c-snsShare__button js-getSnsLink"
-                            data-sns="line"
-                            title="LINEでシェア"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><img
-                              src="../assets/images/icon_line_lg.svg"
-                              alt="LINE"
-                              width="64"
-                              height="64"
-                          /></a>
-                        </li>
-                        <li>
-                          <button
-                            type="button"
-                            class="c-snsShare__button js-getSnsLink js-copyLink"
-                            data-link=""
-                            data-sns=""
-                            title="リンクをコピー"
-                          >
-                            <img
-                              src="../assets/images/icon_link_lg.svg"
-                              alt="リンク"
-                              width="64"
-                              height="64"
-                            />
-                          </button>
-                        </li>
-                      </ul>
-                    </section>
-                  </div>
-                </article>
-
-                <!-- 投稿下部 -->
-                <div class="p-columnBottomLink">
-                  <p>
-                    <a class="u-link-leftArrow" href="../column/"
-                      >コラム一覧に戻る</a
-                    >
-                  </p>
-                </div>
-              </main>
-
-              <!-- サイドメニュー -->
-              <aside class="c-sidebar">
-                <h2 class="c-sidebar__title">関連する記事</h2>
-                <div id="js-relatedPostList"></div>
-              </aside>
-            </div>
+          <div class="l-container l-container--small">
+            <main>
+              <div id="js-getNewsList"></div>
+              <div id="js-paging"></div>
+            </main>
           </div>
         </div>
         <!-- / main -->

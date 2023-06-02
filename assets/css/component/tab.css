@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  タブ パーツ
+--------------------------------------------------------- */
+.c-tab {
+  list-style: none;
+  padding: 0 0 16px;
+  margin: 0 0 16px;
+  display: flex;
+  gap: 4px;
+  overflow-x: scroll;
+}
+
+.c-tab li {
+  width: 100%;
+  min-width: 120px;
+}
+
+.c-tab__button {
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  padding: 16px 8px;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.c-tab__button:hover {
+  opacity: 0.7;
+}
+
+.c-tab__button.is-active {
+  color: #000;
+  border-top: 4px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .c-tab {
+    margin-bottom: 64px;
+  }
+}
