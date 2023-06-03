@@ -103,7 +103,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 40px 24px;
+  gap: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,6 +131,7 @@
   /* 特徴リスト */
   .p-topFeatureList {
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 }
 

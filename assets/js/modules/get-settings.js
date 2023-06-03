@@ -16,6 +16,13 @@ export const getSettings = () => {
         $("title").html(json.site_settings.site_name);
 
         // ----------------------------------------------
+        // ファビコン 挿入
+        // ----------------------------------------------
+        $("head").append(
+          `<link rel="shortcut icon" sizes="32x32" href="${json.site_settings.favicon.url}">`
+        );
+
+        // ----------------------------------------------
         // Google Fonts 挿入
         // ----------------------------------------------
         if (json.google_fonts != null) {

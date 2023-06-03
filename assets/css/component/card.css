@@ -2,10 +2,15 @@
 /* ---------------------------------------------------------
   カード型パーツ
 --------------------------------------------------------- */
+.c-card {
+  height: 100%;
+}
 
 .c-card__inner {
+  height: 100%;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: flex-end;
   gap: 16px;
 }
 
