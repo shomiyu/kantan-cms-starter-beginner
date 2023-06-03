@@ -29,9 +29,17 @@
     <link rel="stylesheet" href="./assets/css/utility/margin.css" />
     <link rel="stylesheet" href="./assets/css/utility/font-size.css" />
     <link rel="stylesheet" href="./assets/css/pages/top.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/js/library/swiper@9.3.2/swiper-bundle.min.css"
+    />
     <!-- / CSS -->
     <!-- js -->
     <script src="./assets/js/library/jquery/jquery-3.7.0.min.js" defer></script>
+    <script
+      src="./assets/js/library/swiper@9.3.2/swiper-bundle.min.js"
+      defer
+    ></script>
     <script type="module" src="./assets/js/index.js" defer></script>
     <!-- / js -->
   </head>
@@ -89,15 +97,7 @@
 
       <main class="l-main">
         <div class="p-mainViual">
-          <figure class="p-mainViual__image">
-            <img
-              src="https://placehold.jp/1024x592.png"
-              alt="ダミー"
-              width="1024"
-              height="592"
-            />
-          </figure>
-
+          <div class="swiper js-mainVisualSwiper" id="js-setMainVisual"></div>
           <p class="p-mainViual__text">
             <span>HTMLとCSSとjQueryでつくる。</span>
             <span>コンテンツ管理ができる。</span>
