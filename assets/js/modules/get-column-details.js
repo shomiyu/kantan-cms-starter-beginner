@@ -61,7 +61,95 @@ export const getColumnDetail = () => {
         }
 
         // 投稿内容を挿入
-        $("#js-post").append(json.body);
+        for (const content of json.body) {
+          if (content.fieldId === "balloon") {
+            /*
+              パーツ - 吹き出し
+            ---------------------------------------------- */
+            let layout = "left";
+            if (content.layout[0] === "画像が右") {
+              layout = "right";
+            }
+
+            const addItem = `
+              <div class="c-balloon c-balloon--${layout}">
+                <figure class="c-balloon__image">
+                  <img src="${content.image.url}" alt="" width="${content.image.width}" height="${content.image.height}" />
+                </figure>
+                <p class="c-balloon__text">${content.balloon}</p>
+              </div>
+            `;
+            $("#js-post").append(addItem);
+          } else if (content.fieldId === "carousel") {
+            /*
+              パーツ - カルーセル
+            ---------------------------------------------- */
+            const images = content.images;
+
+            $("#js-post").append(
+              '<div class="swiper mySwiper c-carousel"></div>'
+            );
+            $("#js-post .mySwiper").append(
+              '<div class="swiper-wrapper"></div>'
+            );
+
+            if (content.navigation) {
+              $("#js-post .mySwiper").append(`
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              `);
+            }
+
+            if (content.pagination) {
+              $("#js-post .mySwiper").append(
+                '<div class="swiper-pagination"></div>'
+              );
+            }
+
+            if (content.scrollbar) {
+              $("#js-post .mySwiper").append(
+                '<div class="swiper-scrollbar"></div>'
+              );
+            }
+
+            for (const image of images) {
+              const addItem = `
+                <div class="swiper-slide p-mainViual__image">
+                  <img src="${image.url}" alt="" width="${image.width}" height="${image.height}" />
+                </div>
+              `;
+              $("#js-post .mySwiper .swiper-wrapper").append(addItem);
+            }
+
+            // Swiper init
+            var swiper = new Swiper(".mySwiper", {
+              effect: content.effect[0],
+              loop: content.loop,
+              autoplay: {
+                delay: content.delay_speed,
+              },
+              speed: content.animation_speed,
+              pagination: {
+                el: content.pagination ? ".swiper-pagination" : "",
+              },
+              navigation: {
+                nextEl: content.navigation ? ".swiper-button-next" : "",
+                prevEl: content.navigation ? ".swiper-button-prev" : "",
+              },
+              scrollbar: {
+                el: content.scrollbar ? ".swiper-scrollbar" : "",
+              },
+            });
+          } else if (content.fieldId === "editor") {
+            /*
+              パーツ - リッチエディタ
+            ---------------------------------------------- */
+            const addItem = `
+              <div class="c-postEditor">${content.editor}</div>
+            `;
+            $("#js-post").append(addItem);
+          }
+        }
 
         // ----------------------------------------------
         // 同じカテゴリの記事を取得する（最大8件）

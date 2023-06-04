@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  カルーセルパーツ
+  - Swiper@9.3.2
+--------------------------------------------------------- */
+.c-carousel {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Prev Next */
+.c-carousel .swiper-button-next,
+.c-carousel .swiper-button-prev {
+  width: 40px;
+}
+
+.c-carousel .swiper-button-next:after,
+.c-carousel .swiper-button-prev:after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../images/icon_arrow_left_wh.svg");
+}
+
+.c-carousel .swiper-button-next:after {
+  transform: scale(-1, 1);
+}
+
+/* ページネーション（ドット） */
+.c-carousel .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+/* スクロールバー */
+.c-carousel .swiper-scrollbar-drag {
+  background: #000;
+}

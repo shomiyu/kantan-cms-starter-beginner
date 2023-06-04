@@ -12,7 +12,7 @@ import { switchCategory } from "../functions/switch-category.js";
  */
 export const getColumnList = (path, limit) => {
   // カテゴリを増やす場合はcategoryListにも追加する
-  const categoryList = ["カスタマイズ", "機能紹介", "知識"];
+  const categoryList = ["カスタマイズ", "機能紹介", "コラム"];
   const paramPage =
     parseInt(new URLSearchParams(window.location.search).get("page")) || 1;
   const offset = limit * (paramPage - 1);

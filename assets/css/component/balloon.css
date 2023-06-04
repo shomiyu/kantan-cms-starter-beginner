@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  吹き出しパーツ
+--------------------------------------------------------- */
+.c-balloon {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.c-balloon__image {
+  width: 64px;
+}
+
+.c-balloon__image img {
+  width: 100%;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.c-balloon__text {
+  font-size: 12px;
+  white-space: pre-wrap;
+  width: calc(100% - 64px - 24px);
+  max-width: 420px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+}
+
+.c-balloon__text::before,
+.c-balloon__text::after {
+  content: "";
+  display: inline-block;
+  clip-path: polygon(0 50%, 100% 100%, 100% 0);
+  position: absolute;
+  top: 16px;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.c-balloon__text::before {
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+}
+
+.c-balloon__text::after {
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  top: 17px;
+}
+
+/* 画像が右 */
+.c-balloon--right {
+  flex-direction: row-reverse;
+}
+
+.c-balloon--right .c-balloon__text::before,
+.c-balloon--right .c-balloon__text::after {
+  right: 0;
+  left: inherit;
+  transform: translateX(100%) scale(-1, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .c-balloon {
+    gap: 40px;
+  }
+
+  .c-balloon__image {
+    width: 80px;
+  }
+
+  .c-balloon__image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .c-balloon__text {
+    font-size: 14px;
+    padding: 24px;
+  }
+}
