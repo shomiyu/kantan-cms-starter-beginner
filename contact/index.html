@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>お知らせ</title>
+    <title>お問い合わせ</title>
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/foundation/reset.css" />
     <link rel="stylesheet" href="../assets/css/foundation/theme.css" />
@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../assets/css/component/sidebar.css" />
     <link rel="stylesheet" href="../assets/css/component/pagination.css" />
     <link rel="stylesheet" href="../assets/css/component/tab.css" />
+    <link rel="stylesheet" href="../assets/css/component/form.css" />
     <link
       rel="stylesheet"
       href="../assets/css/utility/screen-reader-text.css"
@@ -107,21 +108,114 @@
       <div class="l-main">
         <!-- page title -->
         <div class="c-childPageTitle">
-          <h1 class="c-childPageTitle__text">お知らせ</h1>
+          <h1 class="c-childPageTitle__text">お問い合わせ</h1>
         </div>
         <!-- / page title -->
 
         <!-- main -->
         <div class="l-mainContents">
-          <div class="l-container l-container--medium">
-            <!-- カテゴリー -->
-            <div id="js-getCategoryList"></div>
-          </div>
-
           <div class="l-container l-container--small">
             <main>
-              <div id="js-getNewsList"></div>
-              <div id="js-setPagination"></div>
+              <form
+                class="c-form"
+                name="contact"
+                method="POST"
+                action="/contact/thanks.html"
+                netlify
+              >
+                <dl>
+                  <div class="c-form__parts">
+                    <dt class="c-form__label required">
+                      <label for="yourName">お名前</label>
+                    </dt>
+                    <dd class="c-form__entry">
+                      <input
+                        type="text"
+                        name="yourName"
+                        id="yourName"
+                        placeholder="例：山田　太郎"
+                        required
+                      />
+                    </dd>
+                  </div>
+                  <div class="c-form__parts">
+                    <dt class="c-form__label required">
+                      <label for="yourNameKana">お名前（カナ）</label>
+                    </dt>
+                    <dd class="c-form__entry">
+                      <input
+                        type="text"
+                        name="yourNameKana"
+                        id="yourNameKana"
+                        placeholder="例：ヤマダ　タロウ"
+                        required
+                      />
+                    </dd>
+                  </div>
+                  <div class="c-form__parts">
+                    <dt class="c-form__label required">
+                      <label for="yourEmail">ご返信先のメールアドレス</label>
+                    </dt>
+                    <dd class="c-form__entry">
+                      <input
+                        type="email"
+                        name="yourEmail"
+                        id="yourEmail"
+                        placeholder="例：test@gmail.com"
+                        required
+                      />
+                    </dd>
+                  </div>
+                  <div class="c-form__parts">
+                    <dt class="c-form__label">
+                      <label for="yourTel">お電話番号</label>
+                    </dt>
+                    <dd class="c-form__entry">
+                      <input
+                        type="tel"
+                        name="yourTel"
+                        id="yourTel"
+                        placeholder="例：090-1234-1234"
+                      />
+                    </dd>
+                  </div>
+                  <div class="c-form__parts">
+                    <dt class="c-form__label">
+                      <label for="subject">件名</label>
+                    </dt>
+                    <dd class="c-form__entry small">
+                      <div class="c-form__selectWrapper">
+                        <select name="subject" id="subject">
+                          <option value="お問い合わせ">お問い合わせ</option>
+                          <option value="その他">その他</option>
+                        </select>
+                      </div>
+                    </dd>
+                  </div>
+                  <div class="c-form__parts">
+                    <dt class="c-form__label required">
+                      <label for="yourMessage">お問い合わせ内容</label>
+                    </dt>
+                    <dd class="c-form__entry">
+                      <textarea
+                        name="yourMessage"
+                        id="yourMessage"
+                        required
+                      ></textarea>
+                    </dd>
+                  </div>
+                </dl>
+
+                <p class="c-form__agreement">
+                  <a href="#!" target="_blank" rel="noopener noreferrer"
+                    >プライバシーポリシー</a
+                  >にご同意の上、送信してください。
+                </p>
+
+                <div class="u-mt-sp-64 u-text-center">
+                  <button class="c-button" type="submit">送信する</button>
+                </div>
+              </form>
             </main>
           </div>
         </div>

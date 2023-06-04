@@ -7,3 +7,8 @@
   padding-top: 65px;
   flex: 1;
 }
+
+.l-mainContents {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}

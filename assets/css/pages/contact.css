@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  お問い合わせページ 独自スタイル
+--------------------------------------------------------- */
+.p-contactThanksTitle {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.p-contactThanksTitle__innerText {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  padding-right: 40px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.p-contactThanksTitle__innerText::before,
+.p-contactThanksTitle__innerText::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 32px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+}
+
+.p-contactThanksTitle__innerText::before {
+  left: 0;
+  transform: rotate(-20deg);
+}
+
+.p-contactThanksTitle__innerText::after {
+  right: 0;
+  transform: rotate(20deg);
+}
+
+.p-contactThanksText {
+  text-align: center;
+  line-height: 1.7;
+}
