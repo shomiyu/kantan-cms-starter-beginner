@@ -3,11 +3,11 @@
   見出しパーツ
 --------------------------------------------------------- */
 /* 番号付き見出し */
-.c-headingHasNumber {
+.l-headingHasNumber {
   counter-reset: function;
 }
 
-.c-headingHasNumber__title {
+.l-headingHasNumber__title {
   counter-increment: function;
   font-size: 20px;
   line-height: 1.5;
@@ -17,7 +17,7 @@
   padding: 8px 8px 8px calc(40px + 10px + 16px);
 }
 
-.c-headingHasNumber__title::before {
+.l-headingHasNumber__title::before {
   content: counter(function, decimal-leading-zero);
   font-family: "Titillium Web", sans-serif;
   color: var(--color-text-light);
@@ -36,7 +36,7 @@
   left: 0;
 }
 
-.c-headingHasNumber__title::after {
+.l-headingHasNumber__title::after {
   content: "";
   display: inline-block;
   width: 10px;
@@ -49,18 +49,18 @@
 }
 
 @media screen and (min-width: 768px) {
-  .c-headingHasNumber__title {
+  .l-headingHasNumber__title {
     font-size: 28px;
     padding-left: calc(64px + 10px + 16px);
     margin-bottom: 40px;
   }
 
-  .c-headingHasNumber__title::before {
+  .l-headingHasNumber__title::before {
     font-size: 40px;
     width: 64px;
   }
 
-  .c-headingHasNumber__title::after {
+  .l-headingHasNumber__title::after {
     left: 64px;
   }
 }

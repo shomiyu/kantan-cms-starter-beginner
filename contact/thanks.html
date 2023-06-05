@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="../assets/css/layout/main.css" />
     <link rel="stylesheet" href="../assets/css/layout/section.css" />
     <link rel="stylesheet" href="../assets/css/layout/heading.css" />
-    <link rel="stylesheet" href="../assets/css/component/header.css" />
-    <link rel="stylesheet" href="../assets/css/component/footer.css" />
+    <link rel="stylesheet" href="../assets/css/layout/header.css" />
+    <link rel="stylesheet" href="../assets/css/layout/footer.css" />
     <link
       rel="stylesheet"
       href="../assets/css/component/child-page-title.css"
@@ -55,10 +55,10 @@
   <body>
     <div class="l-wrapper">
       <!-- header -->
-      <header class="c-header" id="js-header">
-        <div class="c-header__container">
-          <p class="c-header__siteName">
-            <a class="c-header__siteNameLink" href="/">
+      <header class="l-header" id="js-header">
+        <div class="l-header__container">
+          <p class="l-header__siteName">
+            <a class="l-header__siteNameLink" href="/">
               <img
                 src="../assets/images/logo.svg"
                 alt="KANTAN! CMS STARTER for Beginner"
@@ -68,31 +68,31 @@
             </a>
           </p>
 
-          <button class="c-headerMobileButton" id="js-mobileMenuButton">
-            <span class="c-headerMobileButton__line">
+          <button class="l-headerMobileButton" id="js-mobileMenuButton">
+            <span class="l-headerMobileButton__line">
               <span class="u-screenReaderText">メニューを開閉する</span>
             </span>
           </button>
 
-          <div class="c-headerMenuWrapper" id="js-mobileMenu">
-            <nav class="c-headerMenu">
-              <ul class="c-headerMenuList">
-                <li class="c-headerMenuList__item">
-                  <a class="c-headerMenuList__link" href="#!">機能紹介</a>
+          <div class="l-headerMenuWrapper" id="js-mobileMenu">
+            <nav class="l-headerMenu">
+              <ul class="l-headerMenuList">
+                <li class="l-headerMenuList__item">
+                  <a class="l-headerMenuList__link" href="../about-functions/">機能紹介</a>
                 </li>
-                <li class="c-headerMenuList__item">
-                  <a class="c-headerMenuList__link" href="../flow/"
+                <li class="l-headerMenuList__item">
+                  <a class="l-headerMenuList__link" href="../flow/"
                     >公開までの流れ</a
                   >
                 </li>
-                <li class="c-headerMenuList__item">
-                  <a class="c-headerMenuList__link" href="../column/"
+                <li class="l-headerMenuList__item">
+                  <a class="l-headerMenuList__link" href="../column/"
                     >お役立ちコラム</a
                   >
                 </li>
-                <li class="c-headerMenuList__item c-headerMenuList__item--cta">
+                <li class="l-headerMenuList__item l-headerMenuList__item--cta">
                   <a
-                    class="c-headerMenuList__ctaLink"
+                    class="l-headerMenuList__ctaLink"
                     href="#!"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -133,10 +133,10 @@
       </div>
 
       <!-- footer -->
-      <footer class="c-footer">
+      <footer class="l-footer">
         <div class="l-container">
-          <div class="c-footer__upper">
-            <p class="c-footer__logo">
+          <div class="l-footer__upper">
+            <p class="l-footer__logo">
               <a href="/">
                 <img
                   src="../assets/images/logo_large.svg"
@@ -148,7 +148,7 @@
             </p>
 
             <nav>
-              <div class="c-footer__sitemap">
+              <div class="l-footer__sitemap">
                 <ul class="u-list-hyphen u-fz-sp-small">
                   <li><a href="../about-functions/">機能紹介</a></li>
                   <li><a href="../flow/">公開までの流れ</a></li>
@@ -163,7 +163,7 @@
             </nav>
           </div>
         </div>
-        <p class="c-footer__copyright">
+        <p class="l-footer__copyright">
           <small>©︎ 2023 KANTAN! CMS STARTER All right reserved.</small>
         </p>
       </footer>

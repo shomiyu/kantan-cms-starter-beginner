@@ -3,7 +3,9 @@
   見出し 設定用
 --------------------------------------------------------- */
 
-/* h2 相当の見出し */
+/*
+  通常 / h2相当
+---------------------------------------------- */
 .l-headingPrimary {
   font-size: 24px;
   font-weight: 900;
@@ -16,5 +18,70 @@
   .l-headingPrimary {
     font-size: 32px;
     margin-bottom: 64px;
+  }
+}
+
+/*
+  番号付き見出し
+---------------------------------------------- */
+.l-headingHasNumber {
+  counter-reset: function;
+}
+
+.l-headingHasNumber__title {
+  counter-increment: function;
+  font-size: 20px;
+  line-height: 1.5;
+  border-top: 2px solid var(--color-text-main);
+  margin-bottom: 24px;
+  position: relative;
+  padding: 8px 8px 8px calc(40px + 10px + 16px);
+}
+
+.l-headingHasNumber__title::before {
+  content: counter(function, decimal-leading-zero);
+  font-family: "Titillium Web", sans-serif;
+  color: var(--color-text-light);
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  padding: 4px 4px 4px 8px;
+  background-color: var(--color-text-main);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.l-headingHasNumber__title::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  background-color: var(--color-text-main);
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  position: absolute;
+  top: 0;
+  left: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .l-headingHasNumber__title {
+    font-size: 28px;
+    padding-left: calc(64px + 10px + 16px);
+    margin-bottom: 40px;
+  }
+
+  .l-headingHasNumber__title::before {
+    font-size: 40px;
+    width: 64px;
+  }
+
+  .l-headingHasNumber__title::after {
+    left: 64px;
   }
 }

@@ -3,7 +3,7 @@
   ヘッダーパーツ
 --------------------------------------------------------- */
 
-.c-header {
+.l-header {
   width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -16,33 +16,33 @@
   z-index: 3;
 }
 
-.c-header__container {
+.l-header__container {
   display: flex;
 }
 
-.c-header__siteName {
+.l-header__siteName {
   position: relative;
   z-index: 3;
 }
 
-.c-header__siteNameLink:hover {
+.l-header__siteNameLink:hover {
   opacity: 0.7;
   transition: 0.3s all ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
-  .c-header {
+  .l-header {
     padding-left: 48px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .c-header {
+  .l-header {
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  .c-header__container {
+  .l-header__container {
     justify-content: space-between;
     align-items: center;
   }
@@ -51,7 +51,7 @@
 /*
   Mobile Menu
 ---------------------------------------------- */
-.c-headerMenuWrapper {
+.l-headerMenuWrapper {
   display: none;
   position: fixed;
   width: 100%;
@@ -63,13 +63,13 @@
   z-index: 0;
 }
 
-.c-headerMenu {
+.l-headerMenu {
   padding-top: calc(65px + 40px);
   background-color: var(--color-bg-main);
   height: 100%;
 }
 
-.c-headerMenuList {
+.l-headerMenuList {
   list-style: none;
   width: 80%;
   max-width: 480px;
@@ -78,17 +78,17 @@
   margin: 0 auto;
 }
 
-.c-headerMenuList__item--cta {
+.l-headerMenuList__item--cta {
   margin-top: 40px;
 }
 
-.c-headerMenuList__link {
+.l-headerMenuList__link {
   display: block;
   padding: 8px 24px 8px 0;
   position: relative;
 }
 
-.c-headerMenuList__link::after {
+.l-headerMenuList__link::after {
   content: "";
   display: inline-block;
   width: 24px;
@@ -103,7 +103,7 @@
   transform: translateY(-50%);
 }
 
-.c-headerMenuList__ctaLink {
+.l-headerMenuList__ctaLink {
   font-weight: 900;
   color: var(--color-text-light);
   background-color: var(--color-accent-primary);
@@ -113,7 +113,7 @@
   position: relative;
 }
 
-.c-headerMenuList__ctaLink::after {
+.l-headerMenuList__ctaLink::after {
   content: "";
   display: inline-block;
   width: 24px;
@@ -128,18 +128,18 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .c-headerMenuWrapper {
+  .l-headerMenuWrapper {
     display: block;
     position: static;
     width: auto;
     height: inherit;
   }
 
-  .c-headerMenu {
+  .l-headerMenu {
     padding: 0;
   }
 
-  .c-headerMenuList {
+  .l-headerMenuList {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -147,17 +147,17 @@
     max-width: inherit;
   }
 
-  .c-headerMenuList__item--cta {
+  .l-headerMenuList__item--cta {
     margin-top: 0;
     margin-left: 16px;
   }
 
-  .c-headerMenuList__link {
+  .l-headerMenuList__link {
     padding: 20px 8px;
     position: relative;
   }
 
-  .c-headerMenuList__link::before {
+  .l-headerMenuList__link::before {
     content: "";
     display: block;
     width: 0;
@@ -169,21 +169,21 @@
     transition: 0.4s all ease-in-out;
   }
 
-  .c-headerMenuList__link:hover::before {
+  .l-headerMenuList__link:hover::before {
     width: 100%;
   }
 
-  .c-headerMenuList__link::after {
+  .l-headerMenuList__link::after {
     display: none;
   }
 
-  .c-headerMenuList__ctaLink {
+  .l-headerMenuList__ctaLink {
     border-radius: 0;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .c-headerMenuList__ctaLink:hover {
+  .l-headerMenuList__ctaLink:hover {
     opacity: 0.8;
     transition: 0.5s all ease-in-out;
   }
@@ -192,7 +192,7 @@
 /*
   Mobile Menu Button
 ---------------------------------------------- */
-.c-headerMobileButton {
+.l-headerMobileButton {
   width: 65px;
   height: 65px;
   background-color: var(--color-accent-primary);
@@ -204,7 +204,7 @@
   border: none;
 }
 
-.c-headerMobileButton__line {
+.l-headerMobileButton__line {
   display: inline-block;
   width: 40px;
   height: 1px;
@@ -216,8 +216,8 @@
   transition: 0.3s all ease-in-out;
 }
 
-.c-headerMobileButton__line::before,
-.c-headerMobileButton__line::after {
+.l-headerMobileButton__line::before,
+.l-headerMobileButton__line::after {
   content: "";
   display: inline-block;
   width: 100%;
@@ -228,16 +228,16 @@
   transition: 0.3s all ease-in-out;
 }
 
-.c-headerMobileButton__line::before {
+.l-headerMobileButton__line::before {
   top: -8px;
 }
 
-.c-headerMobileButton__line::after {
+.l-headerMobileButton__line::after {
   top: 8px;
 }
 
 @media screen and (min-width: 1024px) {
-  .c-headerMobileButton {
+  .l-headerMobileButton {
     display: none;
   }
 }
@@ -245,17 +245,17 @@
 /*
   アクティブ状態のとき
 ---------------------------------------------- */
-.is-active .c-headerMobileButton__line {
+.is-active .l-headerMobileButton__line {
   background-color: transparent;
 }
 
-.is-active .c-headerMobileButton__line::before {
+.is-active .l-headerMobileButton__line::before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.is-active .c-headerMobileButton__line::after {
+.is-active .l-headerMobileButton__line::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
