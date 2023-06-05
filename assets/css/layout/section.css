@@ -9,6 +9,11 @@
   padding-bottom: 80px;
 }
 
+.l-sectionPrimary--narrow {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .l-sectionPrimary--bgSecondary {
   background-color: var(--color-bg-secondary);
 }
@@ -17,5 +22,10 @@
   .l-sectionPrimary {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+
+  .l-sectionPrimary--narrow {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }

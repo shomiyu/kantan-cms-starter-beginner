@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>機能紹介</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/foundation/reset.css" />
+    <link rel="stylesheet" href="../assets/css/foundation/theme.css" />
+    <link rel="stylesheet" href="../assets/css/foundation/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout/wrapper.css" />
+    <link rel="stylesheet" href="../assets/css/layout/container.css" />
+    <link rel="stylesheet" href="../assets/css/layout/row.css" />
+    <link rel="stylesheet" href="../assets/css/layout/main.css" />
+    <link rel="stylesheet" href="../assets/css/layout/section.css" />
+    <link rel="stylesheet" href="../assets/css/layout/heading.css" />
+    <link rel="stylesheet" href="../assets/css/component/header.css" />
+    <link rel="stylesheet" href="../assets/css/component/footer.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/component/child-page-title.css"
+    />
+    <link rel="stylesheet" href="../assets/css/component/card.css" />
+    <link rel="stylesheet" href="../assets/css/component/button.css" />
+    <link rel="stylesheet" href="../assets/css/component/icon-text.css" />
+    <link rel="stylesheet" href="../assets/css/component/step.css" />
+    <link rel="stylesheet" href="../assets/css/component/news.css" />
+    <link rel="stylesheet" href="../assets/css/component/post.css" />
+    <link rel="stylesheet" href="../assets/css/component/link-list.css" />
+    <link rel="stylesheet" href="../assets/css/component/sidebar.css" />
+    <link rel="stylesheet" href="../assets/css/component/pagination.css" />
+    <link rel="stylesheet" href="../assets/css/component/tab.css" />
+    <link rel="stylesheet" href="../assets/css/component/form.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/utility/screen-reader-text.css"
+    />
+    <link rel="stylesheet" href="../assets/css/utility/display.css" />
+    <link rel="stylesheet" href="../assets/css/utility/text-align.css" />
+    <link rel="stylesheet" href="../assets/css/utility/text-link.css" />
+    <link rel="stylesheet" href="../assets/css/utility/list.css" />
+    <link rel="stylesheet" href="../assets/css/utility/margin.css" />
+    <link rel="stylesheet" href="../assets/css/utility/font-size.css" />
+    <link rel="stylesheet" href="../assets/css/pages/about-functions.css" />
+    <!-- / CSS -->
+    <!-- js -->
+    <script
+      src="../assets/js/library/jquery/jquery-3.7.0.min.js"
+      defer
+    ></script>
+    <script type="module" src="../assets/js/common.js" defer></script>
+    <!-- / js -->
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <!-- header -->
+      <header class="c-header" id="js-header">
+        <div class="c-header__container">
+          <p class="c-header__siteName">
+            <a class="c-header__siteNameLink" href="/">
+              <img
+                src="../assets/images/logo.svg"
+                alt="KANTAN! CMS STARTER for Beginner"
+                width="190"
+                height="28"
+              />
+            </a>
+          </p>
+
+          <button class="c-headerMobileButton" id="js-mobileMenuButton">
+            <span class="c-headerMobileButton__line">
+              <span class="u-screenReaderText">メニューを開閉する</span>
+            </span>
+          </button>
+
+          <div class="c-headerMenuWrapper" id="js-mobileMenu">
+            <nav class="c-headerMenu">
+              <ul class="c-headerMenuList">
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="../about-functions/"
+                    >機能紹介</a
+                  >
+                </li>
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="../flow/"
+                    >公開までの流れ</a
+                  >
+                </li>
+                <li class="c-headerMenuList__item">
+                  <a class="c-headerMenuList__link" href="../column/"
+                    >お役立ちコラム</a
+                  >
+                </li>
+                <li class="c-headerMenuList__item c-headerMenuList__item--cta">
+                  <a
+                    class="c-headerMenuList__ctaLink"
+                    href="#!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >テンプレートから作成</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- / header -->
+
+      <div class="l-main">
+        <!-- page title -->
+        <div class="c-childPageTitle">
+          <h1 class="c-childPageTitle__text">機能紹介</h1>
+        </div>
+        <!-- / page title -->
+
+        <!-- main -->
+        <div class="l-mainContents">
+          <div class="l-container l-container--small">
+            <main class="p-aboutFunctions">
+              <p>このテンプレートに導入されている機能をご紹介します。</p>
+
+              <section
+                class="l-sectionPrimary l-sectionPrimary--narrow p-aboutFunctions__item"
+              >
+                <h2 class="p-aboutFunctions__title">CMS機能</h2>
+                <div class="p-aboutFunctions__textContents">
+                  <p>
+                    コンテンツ管理に<a
+                      href="https://microcms.io/"
+                      class="u-link-external"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >microCMS</a
+                    >を使用して、お知らせとコラムが投稿できるようになっており、セットアップ後に簡単な設定ですぐに動きます。
+                  </p>
+                  <p>
+                    管理画面もシンプルで使いやすく、何より無料プランで使用できるので小規模のサイトに便利です。
+                  </p>
+                </div>
+              </section>
+
+              <section
+                class="l-sectionPrimary l-sectionPrimary--narrow p-aboutFunctions__item"
+              >
+                <h2 class="p-aboutFunctions__title">
+                  classを充てるだけでパーツが完成
+                </h2>
+                <div class="p-aboutFunctions__textContents">
+                  <p>
+                    classを充てるだけでカード型のパーツになったり、ボタンになったり、サイトを作る際によく使われるパーツを事前に作っているのでカスタマイズも簡単です。<br />もちろん、パーツを使わずに自前で作成してもOK。
+                  </p>
+                </div>
+
+                <div class="u-mt-sp-24 u-text-center">
+                  <ul class="c-linkList">
+                    <li>
+                      <a href="#!" class="c-linkList__contents"
+                        >CSSを充てるだけ！テンプレートで使えるパーツ集の紹介</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section
+                class="l-sectionPrimary l-sectionPrimary--narrow p-aboutFunctions__item"
+              >
+                <h2 class="p-aboutFunctions__title">
+                  新しいページを作るのも簡単
+                </h2>
+                <div class="p-aboutFunctions__textContents">
+                  <p>
+                    テンプレートページを用意しており、コピーするだけで新しいページを作ることができます。<br />ページのコピー後はtitleや見出しなどを編集してからコンテンツを挿入してください。
+                  </p>
+                </div>
+
+                <div class="u-mt-sp-24 u-text-center">
+                  <ul class="c-linkList">
+                    <li>
+                      <a href="#!" class="c-linkList__contents"
+                        >新しいページの作り方</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section
+                class="l-sectionPrimary l-sectionPrimary--narrow p-aboutFunctions__item"
+              >
+                <h2 class="p-aboutFunctions__title">
+                  お問い合わせフォーム導入済み
+                </h2>
+                <div class="p-aboutFunctions__textContents">
+                  <p>
+                    テンプレート内にお問い合わせフォームを作成してあるので、サーバーにNetlifyを選べばアップロードするだけでOK。
+                    <br />Netlify以外でも好きな外部フォームサービスに登録してURLを埋め込むだけで使えます。
+                  </p>
+                  <p>フォームのカスタマイズもHTMLの知識だけ。</p>
+                </div>
+                <div class="u-mt-sp-24">
+                  <ul class="c-linkList">
+                    <li>
+                      <a href="#!" class="c-linkList__contents"
+                        >お問い合わせフォームを導入する</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section
+                class="l-sectionPrimary l-sectionPrimary--narrow p-aboutFunctions__item"
+              >
+                <h2 class="p-aboutFunctions__title">Swiperが使える</h2>
+                <div class="p-aboutFunctions__textContents">
+                  <p>
+                    「スライドショーを入れたい。」その要望もすでにクリア。<br />決まったHTMLを書くだけでスライドします。
+                  </p>
+                </div>
+
+                <div class="u-mt-sp-24">
+                  <ul class="c-linkList">
+                    <li>
+                      <a href="#!" class="c-linkList__contents"
+                        >Swiperを使いたい</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </main>
+          </div>
+        </div>
+        <!-- / main -->
+      </div>
+
+      <!-- footer -->
+      <footer class="c-footer">
+        <div class="l-container">
+          <div class="c-footer__upper">
+            <p class="c-footer__logo">
+              <a href="/">
+                <img
+                  src="../assets/images/logo_large.svg"
+                  alt="KANTAN! CMS STARTER for Beginner"
+                  width="220"
+                  height="119"
+                />
+              </a>
+            </p>
+
+            <nav>
+              <div class="c-footer__sitemap">
+                <ul class="u-list-hyphen u-fz-sp-small">
+                  <li><a href="../about-functions/">機能紹介</a></li>
+                  <li><a href="../flow/">公開までの流れ</a></li>
+                  <li><a href="../column/">お役立ちコラム</a></li>
+                </ul>
+                <ul class="u-list-hyphen u-fz-sp-small">
+                  <li><a href="../news/">お知らせ</a></li>
+                  <li><a href="../contact/">お問い合わせ</a></li>
+                  <li><a href="../privacy-policy/">プライバシーポリシー</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <p class="c-footer__copyright">
+          <small>©︎ 2023 KANTAN! CMS STARTER All right reserved.</small>
+        </p>
+      </footer>
+      <!-- / footer -->
+    </div>
+  </body>
+</html>
