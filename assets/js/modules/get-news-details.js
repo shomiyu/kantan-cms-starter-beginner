@@ -58,7 +58,7 @@ export const getNewsDetail = () => {
         }
 
         // 投稿内容を挿入
-        $("#js-post").append(json.body);
+        $("#js-post").append(`<div class="c-postEditor">${json.body}</div>`);
 
         // ----------------------------------------------
         // meta 最適化
