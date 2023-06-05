@@ -224,6 +224,32 @@ export const getColumnDetail = () => {
             $(sns).attr("data-link", pageUrl);
           }
         }
+
+        // ----------------------------------------------
+        // meta 最適化
+        // ----------------------------------------------
+        const title = json.seo_settings.meta_title ?? json.title;
+        const seoDescription = json.seo_settings.meta_description ?? undefined;
+
+        fetch(`https://${microcms.SERVICE_ID}.microcms.io/api/v1/settings`, {
+          headers: {
+            "X-MICROCMS-API-KEY": microcms.API_KEY,
+          },
+        })
+          .then((response) => response.json())
+          .then((json) => {
+            // title
+            const setTitle = `${title} ${json.meta.dividing_line} ${json.site_settings.site_name}`;
+            $("title").text(setTitle);
+
+            // description
+            const description = seoDescription ?? json.meta.meta_description;
+            $('meta[name="description"]').attr("content", description);
+
+            // OGP
+            $('meta[property="og:title"]').attr("content", setTitle);
+            $('meta[property="og:description"]').attr("content", description);
+          });
       });
   });
 };

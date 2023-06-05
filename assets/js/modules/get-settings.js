@@ -10,10 +10,47 @@ export const getSettings = () => {
       .then((response) => response.json())
       .then((json) => {
         // ----------------------------------------------
-        // サイト名を設定
-        // メモ：時間かかるのでやめるかも、どこまで許容するか考える
+        // メタ情報
         // ----------------------------------------------
-        $("title").html(json.site_settings.site_name);
+        const thisPathName = window.location.pathname;
+        const thisPageUrl = window.location.href;
+        const isTopPage = thisPathName === "/";
+
+        // title
+        const baseTitle = $("title").text();
+        const setTitle = json.site_settings.site_name;
+        const fullTitle = `${baseTitle} ${json.meta.dividing_line} ${json.site_settings.site_name}`;
+        if (isTopPage) {
+          $("title").text(setTitle);
+        } else {
+          $("title").text(fullTitle);
+        }
+
+        // description
+        const descriptionText = json.meta.meta_description ?? "";
+        const descriptionHtml = `
+        <meta name="description" content="${descriptionText}">
+        `;
+        $("head").append(descriptionHtml);
+
+        // OGP
+        $("head").append(`
+          <!-- OGP -->
+          <meta property="og:title" content="${
+            isTopPage ? setTitle : fullTitle
+          }">
+          <meta property="og:type" content="${
+            isTopPage ? "website" : "article"
+          }">
+          <meta property="og:url" content="${thisPageUrl}">
+          <meta property="og:image" content="${json.meta.og_image.url}">
+          <meta property="og:site_name" content="${
+            json.site_settings.site_name
+          }">
+          <meta property="og:description" content="${descriptionText}">
+          <meta name="twitter:card" content="summary_large_image">
+          <!-- / OGP -->
+        `);
 
         // ----------------------------------------------
         // ファビコン 挿入
@@ -40,7 +77,6 @@ export const getSettings = () => {
 
         // ----------------------------------------------
         // noindex 設定
-        // メモ：Google 非推奨なのでやめるかも
         // ----------------------------------------------
         if (json.site_settings.noindex) {
           $("head").append('<meta name="robots" content="noindex">');
