@@ -3,7 +3,7 @@
   フォームパーツ
 --------------------------------------------------------- */
 .c-form ::placeholder {
-  color: #b6b3b3;
+  color: var(--color-text-gray);
 }
 
 .c-form__parts + .c-form__parts {
@@ -22,7 +22,7 @@
 
 .c-form__label.required label::after {
   content: "※";
-  color: #f82727;
+  color: var(--color-accent-red);
   font-size: 10px;
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@
   width: 100%;
   min-height: 48px;
   padding: 12px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
   background-color: transparent;
   appearance: none;
@@ -44,7 +44,7 @@
   width: 100%;
   min-height: 120px;
   padding: 12px 16px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-light);
   border-radius: 4px;
   background-color: transparent;
   appearance: none;

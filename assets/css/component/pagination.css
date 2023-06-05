@@ -23,13 +23,13 @@
 }
 
 .c-pagination__link.number:hover {
-  color: #fff;
+  color: var(--color-button-text);
   font-weight: 900;
-  background-color: #000;
+  background-color: var(--color-button-bg);
 }
 
 .c-pagination__link.is-current {
-  color: #fff;
+  color: var(--color-button-text);
   font-weight: 900;
-  background-color: #000;
+  background-color: var(--color-button-bg);
 }

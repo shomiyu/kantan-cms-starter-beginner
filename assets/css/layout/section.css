@@ -9,8 +9,8 @@
   padding-bottom: 80px;
 }
 
-.l-sectionPrimary--gray {
-  background-color: #fafafa;
+.l-sectionPrimary--bgSecondary {
+  background-color: var(--color-bg-secondary);
 }
 
 @media screen and (min-width: 768px) {

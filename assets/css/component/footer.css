@@ -4,7 +4,7 @@
 --------------------------------------------------------- */
 
 .c-footer {
-  background-color: #fafafa;
+  background-color: var(--color-bg-footer);
   padding-top: 48px;
 }
 

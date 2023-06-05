@@ -3,7 +3,7 @@
   SNSシェア
 --------------------------------------------------------- */
 .c-snsShare {
-  background-color: #fafafa;
+  background-color: var(--color-bg-secondary);
   padding: 32px 24px 40px;
 }
 
@@ -27,7 +27,7 @@
   display: inline-block;
   width: 1px;
   height: 32px;
-  background-color: #000;
+  background-color: var(--color-text-main);
   position: absolute;
   bottom: 0;
 }

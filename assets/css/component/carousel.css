@@ -20,7 +20,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: #000;
+  background-color: var(--color-accent-primary);
   border-radius: 50%;
   background-size: 80%;
   background-repeat: no-repeat;
@@ -34,10 +34,10 @@
 
 /* ページネーション（ドット） */
 .c-carousel .swiper-pagination-bullet-active {
-  background: #000;
+  background: var(--color-accent-primary);
 }
 
 /* スクロールバー */
 .c-carousel .swiper-scrollbar-drag {
-  background: #000;
+  background: var(--color-accent-primary);
 }

@@ -7,6 +7,20 @@
 --------------------------------------------------------- */
 
 :root {
+  /* 色 */
+  --color-text-main: #000;
+  --color-text-gray: #b6b3b3;
+  --color-text-light: #fff;
+  --color-bg-main: #fff;
+  --color-bg-secondary: #fafafa;
+  --color-bg-footer: #fafafa;
+  --color-button-bg: #000;
+  --color-button-text: #fff;
+  --color-accent-primary: #000;
+  --color-accent-red: #f82727;
+  --color-border-primary: #000;
+  --color-border-light: #ddd;
+
   /* 角丸 */
   --border-radius-primary: 4px;
 

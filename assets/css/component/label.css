@@ -3,10 +3,10 @@
   ラベル パーツ
 --------------------------------------------------------- */
 .c-label {
-  color: #fff;
+  color: var(--color-text-light);
   display: inline-block;
   line-height: 1;
   padding: 8px 16px;
-  background-color: #000;
+  background-color: var(--color-accent-primary);
   border-radius: 25px;
 }

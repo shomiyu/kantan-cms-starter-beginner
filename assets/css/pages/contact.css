@@ -22,7 +22,7 @@
   display: inline-block;
   width: 1px;
   height: 32px;
-  background-color: #000;
+  background-color: var(--color-text-main);
   position: absolute;
   bottom: 0;
 }

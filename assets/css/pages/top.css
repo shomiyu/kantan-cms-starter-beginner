@@ -75,7 +75,7 @@
 /*
   特徴セクション
 ---------------------------------------------- */
-.p-topFeatureHeading {
+/* .p-topFeatureHeading {
   font-size: 24px;
   text-align: center;
   margin-bottom: 40px;
@@ -95,7 +95,7 @@
   padding: 8px 16px;
   background-color: #000;
   border-radius: 35px;
-}
+} */
 
 /* 特徴リスト */
 .p-topFeatureList {

@@ -22,7 +22,7 @@
 /* 番号 */
 .c-step__item::before {
   content: counter(step, decimal-leading-zero);
-  color: #fff;
+  color: var(--color-text-light);
   font-size: 32px;
   font-weight: 900;
   letter-spacing: 0.05em;
@@ -31,7 +31,7 @@
   display: inline-block;
   width: 64px;
   height: 64px;
-  background-color: #000;
+  background-color: var(--color-accent-primary);
   border-radius: 4px;
   position: absolute;
   top: 0;
@@ -49,7 +49,7 @@
   display: inline-block;
   width: 3px;
   height: calc(100% + 40px);
-  background-color: #000;
+  background-color: var(--color-accent-primary);
   position: absolute;
   left: calc(64px / 2);
   top: 0;

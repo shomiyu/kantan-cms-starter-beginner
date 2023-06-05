@@ -34,29 +34,9 @@ export const getSettings = () => {
         }
 
         // ----------------------------------------------
-        // テーマ 挿入
-        // ----------------------------------------------
-        const insertThemeStyle = `
-        <style>
-        :root {
-          --color-bg-main: ${json.theme_color.color_bg_main ?? "#fff"};
-          --color-bg-accent: ${json.theme_color.color_bg_accent ?? "#fafafa"};
-          --color-bg-button: ${json.theme_color.color_bg_button ?? "#000"};
-          --color-text-main: ${json.theme_color.color_text_main ?? "#000"};
-          --color-text-h2: ${json.theme_color.color_text_h2 ?? "#000"};
-          --color-text-h3: ${json.theme_color.color_text_h3 ?? "#000"};
-          --color-text-h4: ${json.theme_color.color_text_h4 ?? "#000"};
-          --color-accent-primary: ${
-            json.theme_color.color_accent_primary ?? "#000"
-          };
-        }
-        </style>`;
-        $("head").append(insertThemeStyle);
-
-        // ----------------------------------------------
         // 追加CSS 挿入
         // ----------------------------------------------
-        $("head").append("<style>" + json.add_css + "</>");
+        $("head").append("<style>" + json.add_css + "</style>");
 
         // ----------------------------------------------
         // noindex 設定

@@ -11,7 +11,7 @@
 
 .c-newsList__item {
   padding: 16px 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-border-light);
 }
 
 .c-newsList__itemInner {
@@ -47,12 +47,12 @@ a.c-newsList__contents:hover {
 }
 
 .c-newsList__label {
-  color: #fff;
+  color: var(--color-text-light);
   font-size: 10px;
   line-height: 20px;
   display: inline-block;
   padding: 0 8px;
-  background-color: #000;
+  background-color: var(--color-accent-primary);
   border-radius: 12px;
 }
 
@@ -62,7 +62,7 @@ a.c-newsList__contents::after {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuNzUgNy41MDI0NEwxNSAxMi4wMDAyTDkuNzUgMTYuNTAyNCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K");
+  background-image: url("../../images/icon_arrow_right_bk.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@ a[target="_blank"].c-newsList__contents::after {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM2Ml80NTYpIj4KPHBhdGggZD0iTTguNDM3NSAxNy40Mzc1SDE3LjQzNzVWMC41NjI1SDAuNTYyNVY5LjU2MjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik03LjMxMjUgMTUuNzVWMTAuNjg3NU03LjMxMjUgMTAuNjg3NUgyLjI1TTcuMzEyNSAxMC42ODc1TDAuNTYyNSAxNy40Mzc1IiBzdHJva2U9ImJsYWNrIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzM2Ml80NTYiPgo8cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+  background-image: url("../../images/icon_external_link_bk.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

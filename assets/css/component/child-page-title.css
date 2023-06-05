@@ -4,7 +4,7 @@
 --------------------------------------------------------- */
 
 .c-childPageTitle {
-  background-color: var(--color-bg-accent);
+  background-color: var(--color-bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
