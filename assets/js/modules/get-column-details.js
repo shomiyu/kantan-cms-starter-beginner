@@ -1,6 +1,7 @@
 import { microcms } from "../microcms.js";
 import { formatDate } from "../functions/format-date.js";
 import { getParam } from "../functions/get-param.js";
+import { getRandomString } from "../functions/get-random-string.js";
 
 export const getColumnDetail = () => {
   $(function () {
@@ -85,29 +86,30 @@ export const getColumnDetail = () => {
               パーツ - カルーセル
             ---------------------------------------------- */
             const images = content.images;
+            const param = getRandomString(6);
 
             $("#js-post").append(
-              '<div class="swiper mySwiper c-carousel"></div>'
+              `<div class="swiper mySwiper${param} c-carousel"></div>`
             );
-            $("#js-post .mySwiper").append(
+            $(`#js-post .mySwiper${param}`).append(
               '<div class="swiper-wrapper"></div>'
             );
 
             if (content.navigation) {
-              $("#js-post .mySwiper").append(`
+              $(`#js-post .mySwiper${param}`).append(`
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
               `);
             }
 
             if (content.pagination) {
-              $("#js-post .mySwiper").append(
+              $(`#js-post .mySwiper${param}`).append(
                 '<div class="swiper-pagination"></div>'
               );
             }
 
             if (content.scrollbar) {
-              $("#js-post .mySwiper").append(
+              $(`#js-post .mySwiper${param}`).append(
                 '<div class="swiper-scrollbar"></div>'
               );
             }
@@ -118,11 +120,11 @@ export const getColumnDetail = () => {
                   <img src="${image.url}" alt="" width="${image.width}" height="${image.height}" />
                 </div>
               `;
-              $("#js-post .mySwiper .swiper-wrapper").append(addItem);
+              $(`#js-post .mySwiper${param} .swiper-wrapper`).append(addItem);
             }
 
             // Swiper init
-            var swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper(`.mySwiper${param}`, {
               effect: content.effect[0],
               loop: content.loop,
               autoplay: {
