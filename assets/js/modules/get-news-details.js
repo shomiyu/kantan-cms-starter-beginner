@@ -63,8 +63,12 @@ export const getNewsDetail = () => {
         // ----------------------------------------------
         // meta 最適化
         // ----------------------------------------------
-        const title = json.seo_settings.meta_title ?? json.title;
-        const seoDescription = json.seo_settings.meta_description ?? undefined;
+        let title = json.title;
+        let seoDescription = undefined;
+        if (json.seo_settings !== null) {
+          title = json.seo_settings.meta_title ?? json.title;
+          seoDescription = json.seo_settings.meta_description ?? undefined;
+        }
 
         fetch(`https://${microcms.SERVICE_ID}.microcms.io/api/v1/settings`, {
           headers: {
