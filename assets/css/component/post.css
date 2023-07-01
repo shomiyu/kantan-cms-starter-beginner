@@ -146,6 +146,7 @@
   display: inline-block;
   padding-right: calc(4px + 1em + 4px);
   position: relative;
+  margin: 0 4px;
 }
 
 .c-post .c-postEditor a[target="_blank"]::after {
