@@ -207,6 +207,7 @@
   align-items: center;
   background-color: #000;
   border: none;
+  border-radius: 4px;
   width: 40px;
   height: 40px;
   padding: 8px;
@@ -245,9 +246,12 @@
   color: #fff;
   font-size: 14px;
   content: attr(data-filename);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   display: block;
   width: 100%;
-  padding: 8px 16px 8px 40px;
+  padding: 8px 40px;
   border-radius: 4px 4px 0 0;
   background-color: #000;
   position: absolute;
