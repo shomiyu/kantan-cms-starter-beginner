@@ -1,5 +1,5 @@
 import { getColumnDetail } from "./modules/get-column-details.js";
-import { copyPageLink } from "./modules/copy-text.js";
+import { copyPageLink } from "./functions/copy-page-link.js";
 
 $(function () {
   // ----------------------------------------------
