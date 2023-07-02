@@ -61,6 +61,31 @@ export const getNewsDetail = () => {
         $("#js-post").append(`<div class="c-postEditor">${json.body}</div>`);
 
         // ----------------------------------------------
+        // コードブロックのコピー機能
+        // ----------------------------------------------
+        const copyIconPath = "../../assets/images/icon_copy_wh.svg";
+        const doneIconPath = "../../assets/images/icon_done_wh.svg";
+
+        $(".c-postEditor pre").wrap(`<div class="c-codeBlock"></div>`);
+        $(".c-postEditor pre").append(`
+          <button type="button" class="js-copyText">
+            <img src="${copyIconPath}" alt="copy" width="18" height="18">
+          </button>
+        `);
+
+        $(document).on("click", ".js-copyText", function () {
+          const copyText = $(this).prev().text();
+          const img = $(this).children("img");
+
+          navigator.clipboard.writeText(copyText);
+          $(img).attr("src", doneIconPath);
+
+          setTimeout(() => {
+            $(img).attr("src", copyIconPath);
+          }, 1000);
+        });
+
+        // ----------------------------------------------
         // meta 最適化
         // ----------------------------------------------
         let title = json.title;
