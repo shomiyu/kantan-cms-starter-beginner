@@ -187,6 +187,10 @@
 /*
   コードブロック
 ---------------------------------------------- */
+.c-post .c-codeBlock {
+  position: relative;
+}
+
 .c-post .c-codeBlock pre {
   color: #f8f8f2;
   background-color: #272a36;
@@ -195,7 +199,6 @@
   overflow: scroll;
   margin-top: 40px;
   margin-bottom: 40px;
-  position: relative;
 }
 
 .c-post .c-codeBlock .js-copyText {
@@ -325,10 +328,12 @@
   .c-post .c-postEditor h2 {
     font-size: 28px;
     border-left: 16px solid #000;
+    margin-top: 4.286em;
   }
 
   .c-post .c-postEditor h3 {
     font-size: 24px;
+    margin-top: 3.333em;
   }
 
   .c-post .c-postEditor h4 {
