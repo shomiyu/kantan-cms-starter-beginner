@@ -81,6 +81,39 @@ export const getColumnDetail = () => {
               </div>
             `;
             $("#js-post").append(addItem);
+          } else if (content.fieldId === "button") {
+            /*
+              パーツ - ボタン
+            ---------------------------------------------- */
+            const link = `
+              <div class="u-mt-sp-24 u-mb-sp-40 u-text-center">
+                <a class="c-button c-button--${content.theme}" href="${content.button_link}">${content.button_text}</a>
+              </div>
+            `;
+            const externalLink = `
+              <div class="u-mt-sp-24 u-mb-sp-40 u-text-center">
+                <a class="c-button c-button--${content.theme} c-button--external" href="${content.button_link}" target="_blank" rel="noopener noreferrer">${content.button_text}</a>
+              </div>
+            `;
+
+            if (content.external_link) {
+              $("#js-post").append(externalLink);
+            } else {
+              $("#js-post").append(link);
+            }
+          } else if (content.fieldId === "checkPannel") {
+            /*
+              パーツ - チェックパネル
+            ---------------------------------------------- */
+            const addItem = `
+              <div class="c-checkPannel">
+                <dl class="c-checkPannel__inner">
+                  <dt class="c-checkPannel__heading">${content.heading}</dt>
+                  <dd class="c-checkPannel__text">${content.text}</dd>
+                </dl>
+              </div>
+            `;
+            $("#js-post").append(addItem);
           } else if (content.fieldId === "carousel") {
             /*
               パーツ - カルーセル
@@ -116,7 +149,7 @@ export const getColumnDetail = () => {
 
             for (const image of images) {
               const addItem = `
-                <div class="swiper-slide p-mainViual__image">
+                <div class="swiper-slide">
                   <img src="${image.url}" alt="" width="${image.width}" height="${image.height}" />
                 </div>
               `;

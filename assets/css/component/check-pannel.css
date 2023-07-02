@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  チェックパネル
+--------------------------------------------------------- */
+
+.c-checkPannel {
+  position: relative;
+  padding-top: 48px;
+  margin: 40px auto;
+}
+
+.c-checkPannel::before {
+  content: "";
+  display: inline-block;
+  width: 102px;
+  height: 70px;
+  background-image: url("../../images/icon_post_check.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.c-checkPannel__inner {
+  padding: 40px 24px 24px;
+  background-color: var(--color-bg-secondary);
+}
+
+.c-checkPannel__heading {
+  font-size: 20px;
+  font-weight: 900;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.c-checkPannel__text {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border-light);
+  white-space: pre-wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .c-checkPannel__inner {
+    padding: 40px 40px 48px;
+  }
+
+  .c-checkPannel__heading {
+    font-size: 24px;
+  }
+
+  .c-checkPannel__text {
+    text-align: center;
+  }
+}
