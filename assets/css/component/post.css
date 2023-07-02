@@ -177,7 +177,7 @@
   line-height: 1.2;
   display: inline-block;
   padding: 4px 8px;
-  background-color: #000;
+  background-color: #272a36;
   border-radius: 2px;
   margin: 0 4px;
   position: relative;
@@ -187,19 +187,55 @@
 /*
   コードブロック
 ---------------------------------------------- */
-.c-post .c-postEditor pre {
-  color: #fff;
-  white-space: pre-wrap;
-  background-color: rgb(0 0 0 / 85%);
+.c-post .c-codeBlock pre {
+  color: #f8f8f2;
+  background-color: #272a36;
   border-radius: var(--border-radius-primary);
-  padding: 24px;
+  padding: 56px 24px 0 24px;
   overflow: scroll;
   margin-top: 40px;
   margin-bottom: 40px;
+  position: relative;
+}
+
+.c-post .c-codeBlock .js-copyText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.c-post .c-codeBlock .js-copyText img {
+  border-radius: 0;
+  box-shadow: inherit;
 }
 
 .c-post .c-postEditor [data-filename] {
   position: relative;
+}
+
+.c-post .c-postEditor [data-filename]::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("../../images/icon_file_wh.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  z-index: 1;
 }
 
 .c-post .c-postEditor [data-filename]::after {
@@ -208,16 +244,12 @@
   content: attr(data-filename);
   display: block;
   width: 100%;
-  padding: 8px 16px;
+  padding: 8px 16px 8px 40px;
   border-radius: 4px 4px 0 0;
   background-color: #000;
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.c-post .c-postEditor [data-filename] pre {
-  padding-top: 56px;
 }
 
 /*
