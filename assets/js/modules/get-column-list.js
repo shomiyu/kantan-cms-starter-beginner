@@ -61,16 +61,65 @@ export const getColumnList = (path, limit) => {
     })
       .then((response) => response.json())
       .then((json) => {
-        let insertHtml = $('<ul class="c-linkList"></ul>');
+        let insertHtml = $('<ol class="c-columnList"></ol>');
 
         for (const content of json.contents) {
-          const addItem = `
-            <li>
-              <a class="c-linkList__contents" href="${path}post.html?id=${content.id}">${content.title}</a>
+          const addItemSummary = `
+            <li class="c-card">
+              <a href="${path}post.html?id=${content.id}">
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">${content.title}</h3>
+                      <ul class="c-card__tagList u-mb-sp-8">
+                        <li class="c-card__tag">${content.category[0]}</li>
+                      </ul>
+                      <p class="c-card__text">${content.summary}</p>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="${content.thumbnail.url}"
+                        alt=""
+                        width="${content.thumbnail.width}"
+                        height="${content.thumbnail.height}"
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </a>
             </li>
           `;
 
-          insertHtml.append(addItem);
+          const addItem = `
+            <li class="c-card">
+              <a href="${path}post.html?id=${content.id}">
+                <section class="c-card">
+                  <div class="c-card__inner">
+                    <div class="c-card__textContents">
+                      <h3 class="c-card__title">${content.title}</h3>
+                      <ul class="c-card__tagList u-mb-sp-8">
+                        <li class="c-card__tag">${content.category[0]}</li>
+                      </ul>
+                    </div>
+                    <figure class="c-card__image">
+                      <img
+                        src="${content.thumbnail.url}"
+                        alt=""
+                        width="${content.thumbnail.width}"
+                        height="${content.thumbnail.height}"
+                      />
+                    </figure>
+                  </div>
+                </section>
+              </a>
+            </li>
+          `;
+
+          if (content.summary !== undefined || null) {
+            insertHtml.append(addItemSummary);
+          } else {
+            insertHtml.append(addItem);
+          }
         }
 
         $("#js-getColumnList").append(insertHtml);

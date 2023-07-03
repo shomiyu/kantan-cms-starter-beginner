@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+  コラム一覧
+--------------------------------------------------------- */
+
+.c-columnList {
+  list-style: none;
+  display: grid;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .c-columnList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
