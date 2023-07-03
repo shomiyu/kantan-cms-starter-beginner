@@ -66,7 +66,7 @@
 .l-headerMenu {
   padding-top: calc(65px + 40px);
   background-color: var(--color-bg-main);
-  height: 100%;
+  height: calc(100vh + 65px);
 }
 
 .l-headerMenuList {
@@ -137,6 +137,7 @@
 
   .l-headerMenu {
     padding: 0;
+    height: 100%;
   }
 
   .l-headerMenuList {

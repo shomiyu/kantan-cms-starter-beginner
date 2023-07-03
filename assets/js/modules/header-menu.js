@@ -3,6 +3,7 @@ export const headerMenu = () => {
     // ------------------------------------------------------
     // モバイルメニューの開閉
     // ------------------------------------------------------
+    const body = $("body");
     const header = $("#js-header");
     const menu = $("#js-mobileMenu");
 
@@ -10,9 +11,11 @@ export const headerMenu = () => {
       if ($("#js-header").hasClass("is-active")) {
         header.removeClass("is-active");
         menu.fadeOut();
+        body.css("overflow", "auto");
       } else {
         header.addClass("is-active");
         menu.fadeIn();
+        body.css("overflow", "hidden");
       }
     });
   });

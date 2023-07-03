@@ -8,7 +8,8 @@
   counter-reset: step;
   padding: 0;
   margin: 0;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 40px;
   position: relative;
 }
@@ -87,6 +88,7 @@
 
 @media screen and (min-width: 768px) {
   .c-step {
+    display: grid;
     gap: 48px;
   }
 
