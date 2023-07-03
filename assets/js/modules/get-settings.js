@@ -72,10 +72,7 @@ export const getSettings = () => {
         // ----------------------------------------------
         // OGP
         // ----------------------------------------------
-        $("head").attr(
-          "prefix",
-          "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"
-        );
+        $("head").attr("prefix", "og: http://ogp.me/ns#");
         $("title").after(`
           <!-- OGP -->
           <meta property="og:title" content="${
@@ -85,7 +82,7 @@ export const getSettings = () => {
             isTopPage ? "website" : "article"
           }">
           <meta property="og:url" content="${thisPageUrl}">
-          <meta property="og:image" content="http://beginner.kantan-cms-starter.com/assets/images/ogp.png">
+          <meta property="og:image" content="${json.meta.og_image.url}">
           <meta property="og:site_name" content="${
             json.site_settings.site_name
           }">
