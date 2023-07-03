@@ -33,25 +33,6 @@ export const getSettings = () => {
         `;
         $("head").append(descriptionHtml);
 
-        // OGP
-        $("head").append(`
-          <!-- OGP -->
-          <meta property="og:title" content="${
-            isTopPage ? setTitle : fullTitle
-          }">
-          <meta property="og:type" content="${
-            isTopPage ? "website" : "article"
-          }">
-          <meta property="og:url" content="${thisPageUrl}">
-          <meta property="og:image" content="${json.meta.og_image.url}">
-          <meta property="og:site_name" content="${
-            json.site_settings.site_name
-          }">
-          <meta property="og:description" content="${descriptionText}">
-          <meta name="twitter:card" content="summary_large_image">
-          <!-- / OGP -->
-        `);
-
         // ----------------------------------------------
         // ファビコン 挿入
         // ----------------------------------------------
@@ -69,6 +50,49 @@ export const getSettings = () => {
           <!-- / Google Fonts -->`;
           $("title").after(insertGoogleFonts);
         }
+
+        // ----------------------------------------------
+        // Google Tag Manager
+        // ----------------------------------------------
+        if (json.tag_manager_script != null) {
+          $("head").prepend(`${json.tag_manager_script}`);
+        }
+
+        if (json.tag_manager_noscript != null) {
+          $("body").prepend(`${json.tag_manager_noscript}`);
+        }
+
+        // ----------------------------------------------
+        // Google Analytics
+        // ----------------------------------------------
+        if (json.analytics != null) {
+          $("head").prepend(`${json.analytics}`);
+        }
+
+        // ----------------------------------------------
+        // OGP
+        // ----------------------------------------------
+        $("head").attr(
+          "prefix",
+          "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"
+        );
+        $("title").after(`
+          <!-- OGP -->
+          <meta property="og:title" content="${
+            isTopPage ? setTitle : fullTitle
+          }">
+          <meta property="og:type" content="${
+            isTopPage ? "website" : "article"
+          }">
+          <meta property="og:url" content="${thisPageUrl}">
+          <meta property="og:image" content="http://beginner.kantan-cms-starter.com/assets/images/ogp.png">
+          <meta property="og:site_name" content="${
+            json.site_settings.site_name
+          }">
+          <meta property="og:description" content="${descriptionText}">
+          <meta name="twitter:card" content="summary_large_image">
+          <!-- / OGP -->
+        `);
 
         // ----------------------------------------------
         // 追加CSS 挿入
