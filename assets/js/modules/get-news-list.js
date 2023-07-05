@@ -3,6 +3,14 @@ import { formatDate } from "../functions/format-date.js";
 import { setPagination } from "../functions/set-pagination.js";
 import { switchCategory } from "../functions/switch-category.js";
 
+/**
+ * ----------------------------------------------
+ * お知らせ一覧を取得
+ * --
+ * @param path - 該当のページからpost.htmlまでの間のパス
+ * @param limit - 一覧表示する記事の上限数
+ * ----------------------------------------------
+ */
 export const getNewsList = (path, limit) => {
   // カテゴリを増やす場合はcategoryListにも追加する
   const categoryList = ["お知らせ", "プレスリリース"];
