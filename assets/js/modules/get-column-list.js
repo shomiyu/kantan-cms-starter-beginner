@@ -4,9 +4,9 @@ import { switchCategory } from "../functions/switch-category.js";
 
 /**
  * ----------------------------------------------
- * カテゴリ一覧を取得
+ * コラム一覧を取得
  * --
- * @param path - TOPからpost.htmlまでの間のパス
+ * @param path - 該当のページからpost.htmlまでの間のパス
  * @param limit - 一覧表示する記事の上限数
  * ----------------------------------------------
  */

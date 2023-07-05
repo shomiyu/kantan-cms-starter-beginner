@@ -1,19 +1,19 @@
 import { microcms } from "../microcms.js";
 import { formatDate } from "../functions/format-date.js";
 import { getParam } from "../functions/get-param.js";
-import { getRandomString } from "../functions/get-random-string.js";
 
 /**
  * ----------------------------------------------
- * コラム詳細を取得
+ * コラムプレビュー取得
  * ----------------------------------------------
  */
-export const getColumnDetail = () => {
+export const getColumnDraft = () => {
   $(function () {
     const postId = getParam("id");
+    const draftKey = getParam("draftKey");
 
     fetch(
-      `https://${microcms.SERVICE_ID}.microcms.io/api/v1/column/${postId}`,
+      `https://${microcms.SERVICE_ID}.microcms.io/api/v1/column/${postId}?draftKey=${draftKey}`,
       {
         headers: {
           "X-MICROCMS-API-KEY": microcms.API_KEY,
@@ -25,7 +25,7 @@ export const getColumnDetail = () => {
         // ----------------------------------------------
         // 投稿を出力
         // ----------------------------------------------
-        const publishedAt = formatDate(json.publishedAt);
+        const publishedAt = formatDate(json.publishedAt ?? new Date());
         const updatedAt = formatDate(json.updatedAt);
         const thumbnail = json.thumbnail ?? null;
 
@@ -287,36 +287,6 @@ export const getColumnDetail = () => {
             $(sns).attr("data-link", pageUrl);
           }
         }
-
-        // ----------------------------------------------
-        // meta 最適化
-        // ----------------------------------------------
-        let title = json.title;
-        let seoDescription = undefined;
-        if (json.seo_settings !== null) {
-          title = json.seo_settings.meta_title ?? json.title;
-          seoDescription = json.seo_settings.meta_description ?? undefined;
-        }
-
-        fetch(`https://${microcms.SERVICE_ID}.microcms.io/api/v1/settings`, {
-          headers: {
-            "X-MICROCMS-API-KEY": microcms.API_KEY,
-          },
-        })
-          .then((response) => response.json())
-          .then((json) => {
-            // title
-            const setTitle = `${title} ${json.meta.dividing_line} ${json.site_settings.site_name}`;
-            $("title").text(setTitle);
-
-            // description
-            const description = seoDescription ?? json.meta.meta_description;
-            $('meta[name="description"]').attr("content", description);
-
-            // OGP
-            $('meta[property="og:title"]').attr("content", setTitle);
-            $('meta[property="og:description"]').attr("content", description);
-          });
       });
   });
 };
