@@ -118,6 +118,20 @@
         <div class="l-mainContents">
           <div class="l-container l-container--small">
             <main>
+              <div class="u-text-center u-mb-sp-40">
+                <p class="u-mb-sp-24">
+                  コードエディタはVisual Studio Code（以下 VSCode）を前提に<br />
+                  ローカルサーバを立ち上げるのに<a
+                    href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+                    class="u-link-external"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Server</a
+                  >プラグインを使用する。
+                </p>
+                <p>事前にインストールしておこう。</p>
+              </div>
               <ol class="c-step">
                 <li class="c-step__item">
                   <dl>
@@ -187,6 +201,26 @@
                       <p>
                         セットアップ完了画面に表示されているGitHubのページに移動して、ファイルをダウンロード・解凍しよう。
                       </p>
+                      <p>
+                        VSCodeのアプリアイコンにフォルダごとドラッグ＆ドロップするとプロジェクトをエディタで開くことができる。
+                      </p>
+                      <p>
+                        Live
+                        Serverの拡張機能が入っていてフォルダごと開いていれば、VSCodeの右下に「Go
+                        Live」というリンクが出るので、こちらをクリックしてローカルサーバを立ち上げよう。
+                      </p>
+                      <figure>
+                        <img
+                          src="../assets/images/img_flow_03.png"
+                          alt=""
+                          width=""
+                          height=""
+                        />
+                        <figcaption>Live Serverを立ち上げる</figcaption>
+                      </figure>
+                      <p>
+                        ローカルサーバ起動中はmicroCMSとの通信が可能となり、コードの更新も自動で反映されるので、開発時は基本的に立ち上げておく必要がある。
+                      </p>
                     </dd>
                   </dl>
                 </li>
@@ -194,10 +228,6 @@
                   <dl>
                     <dt class="c-step__title">microCMSと連携</dt>
                     <dd class="c-step__text">
-                      <p>
-                        Visual Studio
-                        Codeなどのコードエディタでフォルダごと開こう。
-                      </p>
                       <p>
                         <code>/assets/js/microcms.template.js</code
                         >というファイルがあるので、ファイルごとコピーしてファイル名を<code>microcms.template.js</code>から<code>microcms.js</code>に変更しよう。

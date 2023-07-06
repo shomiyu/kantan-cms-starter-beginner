@@ -9,9 +9,13 @@ HTML と CSS と jQuery で出来る初心者向けの CMS です。
 
 ## 開発環境
 
-お好きなコードエディタとブラウザのみで開発できます。
+コードエディタに Visual Studio Code（以下 VSCode）を使用します。
+拡張機能「[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)」をインストールしておいてください。
 
 ## セットアップ
+
+プロジェクトファイルをダウンロード・解凍したら、VSCode のアプリアイコンにフォルダごとドラッグ＆ドロップして VSCode を立ち上げ、右下隅の「Go Live」のリンクからローカルサーバを立ち上げます。<br>
+※開発中は基本的にローカルサーバを立ち上げて作業してください。
 
 `/assets/js/microcms.template.js`をコピーして`/assets/js/microcms.js`を作り、サービス ID と API キーを入力します。
 
