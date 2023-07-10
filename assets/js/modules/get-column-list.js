@@ -61,22 +61,28 @@ export const getColumnList = (path, limit) => {
     })
       .then((response) => response.json())
       .then((json) => {
-        let insertHtml = $('<ol class="c-columnList"></ol>');
+        let insertHtml = "";
 
-        for (const content of json.contents) {
-          let sammaryHtml = "";
-          let thumbnailHtml = "";
+        if (json.contents.length > 0) {
+          // --
+          // 投稿があるとき
+          // ----------------------------------------------
+          insertHtml = $('<ol class="c-columnList"></ol>');
 
-          // sammaryがあればHTMLを形成
-          if (content.summary !== undefined) {
-            sammaryHtml = `
+          for (const content of json.contents) {
+            let sammaryHtml = "";
+            let thumbnailHtml = "";
+
+            // sammaryがあればHTMLを形成
+            if (content.summary !== undefined) {
+              sammaryHtml = `
               <p class="c-card__text">${content.summary}</p>
             `;
-          }
+            }
 
-          // thumbnailがあればHTMLを形成
-          if (content.thumbnail !== undefined) {
-            thumbnailHtml = `
+            // thumbnailがあればHTMLを形成
+            if (content.thumbnail !== undefined) {
+              thumbnailHtml = `
             <figure class="c-card__image">
               <img
                 src="${content.thumbnail.url}"
@@ -86,9 +92,9 @@ export const getColumnList = (path, limit) => {
               />
             </figure>
             `;
-          }
+            }
 
-          const addItem = `
+            const addItem = `
             <li class="c-card">
               <a href="${path}post.html?id=${content.id}">
                 <section class="c-card">
@@ -107,7 +113,13 @@ export const getColumnList = (path, limit) => {
             </li>
           `;
 
-          insertHtml.append(addItem);
+            insertHtml.append(addItem);
+          }
+        } else {
+          // --
+          // 投稿がないとき
+          // ----------------------------------------------
+          insertHtml = $('<p class="u-text-center">投稿がありません。</p>');
         }
 
         $("#js-getColumnList").append(insertHtml);
