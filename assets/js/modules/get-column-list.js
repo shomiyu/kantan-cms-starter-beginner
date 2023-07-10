@@ -64,31 +64,29 @@ export const getColumnList = (path, limit) => {
         let insertHtml = $('<ol class="c-columnList"></ol>');
 
         for (const content of json.contents) {
-          const addItemSummary = `
-            <li class="c-card">
-              <a href="${path}post.html?id=${content.id}">
-                <section class="c-card">
-                  <div class="c-card__inner">
-                    <div class="c-card__textContents">
-                      <h3 class="c-card__title">${content.title}</h3>
-                      <ul class="c-card__tagList u-mb-sp-8">
-                        <li class="c-card__tag">${content.category[0]}</li>
-                      </ul>
-                      <p class="c-card__text">${content.summary}</p>
-                    </div>
-                    <figure class="c-card__image">
-                      <img
-                        src="${content.thumbnail.url}"
-                        alt=""
-                        width="${content.thumbnail.width}"
-                        height="${content.thumbnail.height}"
-                      />
-                    </figure>
-                  </div>
-                </section>
-              </a>
-            </li>
-          `;
+          let sammaryHtml = "";
+          let thumbnailHtml = "";
+
+          // sammaryがあればHTMLを形成
+          if (content.summary !== undefined) {
+            sammaryHtml = `
+              <p class="c-card__text">${content.summary}</p>
+            `;
+          }
+
+          // thumbnailがあればHTMLを形成
+          if (content.thumbnail !== undefined) {
+            thumbnailHtml = `
+            <figure class="c-card__image">
+              <img
+                src="${content.thumbnail.url}"
+                alt=""
+                width="${content.thumbnail.width}"
+                height="${content.thumbnail.height}"
+              />
+            </figure>
+            `;
+          }
 
           const addItem = `
             <li class="c-card">
@@ -100,26 +98,16 @@ export const getColumnList = (path, limit) => {
                       <ul class="c-card__tagList u-mb-sp-8">
                         <li class="c-card__tag">${content.category[0]}</li>
                       </ul>
+                      ${content.summary !== undefined ? sammaryHtml : ""}
                     </div>
-                    <figure class="c-card__image">
-                      <img
-                        src="${content.thumbnail.url}"
-                        alt=""
-                        width="${content.thumbnail.width}"
-                        height="${content.thumbnail.height}"
-                      />
-                    </figure>
+                    ${content.thumbnail !== undefined ? thumbnailHtml : ""}
                   </div>
                 </section>
               </a>
             </li>
           `;
 
-          if (content.summary !== undefined || null) {
-            insertHtml.append(addItemSummary);
-          } else {
-            insertHtml.append(addItem);
-          }
+          insertHtml.append(addItem);
         }
 
         $("#js-getColumnList").append(insertHtml);
