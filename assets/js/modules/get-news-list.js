@@ -67,14 +67,21 @@ export const getNewsList = (path, limit) => {
     })
       .then((response) => response.json())
       .then((json) => {
-        let insertHtml = $('<ol class="c-newsList"></ol>');
-        for (const content of json.contents) {
-          const date = formatDate(content.updatedAt);
-          let addItem = "";
+        let insertHtml = "";
 
-          if (content.external_link != null) {
-            // 外部リンク
-            addItem = `
+        if (json.contents.length > 0) {
+          // --
+          // 投稿があるとき
+          // ----------------------------------------------
+          insertHtml = $('<ol class="c-newsList"></ol>');
+
+          for (const content of json.contents) {
+            const date = formatDate(content.updatedAt);
+            let addItem = "";
+
+            if (content.external_link != null) {
+              // 外部リンク
+              addItem = `
             <li class="c-newsList__item">
               <a class="c-newsList__contents" href="${content.external_link}" target="_blank" rel="noopener noreferrer">
                 <dl>
@@ -87,9 +94,9 @@ export const getNewsList = (path, limit) => {
               </a>
             </li>
             `;
-          } else if (content.body != null) {
-            // 本文あり（詳細ページにリンク）
-            addItem = `
+            } else if (content.body != null) {
+              // 本文あり（詳細ページにリンク）
+              addItem = `
             <li class="c-newsList__item">
               <a class="c-newsList__contents" href="${path}post.html?id=${content.id}">
                 <dl>
@@ -102,9 +109,9 @@ export const getNewsList = (path, limit) => {
               </a>
             </li>
             `;
-          } else {
-            // 見出しのみ
-            addItem = `
+            } else {
+              // 見出しのみ
+              addItem = `
             <li class="c-newsList__item">
               <div class="c-newsList__contents">
                 <dl>
@@ -117,13 +124,35 @@ export const getNewsList = (path, limit) => {
               </div>
             </li>
             `;
-          }
+            }
 
-          insertHtml.append(addItem);
+            insertHtml.append(addItem);
+          }
+        } else {
+          // --
+          // 投稿がないとき
+          // ----------------------------------------------
+          insertHtml = $(
+            '<p class="u-text-center">まだお知らせがありません。</p>'
+          );
         }
 
         // ページに挿入
         $("#js-getNewsList").append(insertHtml);
+
+        // ----------------------------------------------
+        // もっと見るボタン
+        // ----------------------------------------------
+        if (limit < json.totalCount) {
+          // 表示件数以上の投稿がある場合は「もっと見る」ボタンを表示
+          const moreButton = `
+            <div class="u-text-center u-mt-sp-48 u-mt-tab-64">
+              <a class="c-button" href="${path}">もっとみる</a>
+            </div>
+          `;
+
+          $("#js-newsMoreButton").append(moreButton);
+        }
 
         // ----------------------------------------------
         // ページング
